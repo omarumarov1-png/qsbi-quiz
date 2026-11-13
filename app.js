@@ -157,6 +157,7 @@
     return e;
   }
 
+  var gridAnimated = false, lessonsGradeShown = null;
   function renderGradeGrid(){
     gradeGrid.innerHTML = '';
     var allTile = el('button', 'tile all' + (state.grade==='all' ? ' active' : ''), 'Все классы');
@@ -174,6 +175,7 @@
       };
       gradeGrid.appendChild(t);
     });
+    if(!gridAnimated){ gridAnimated = true; FX.stagger(gradeGrid.children, 'enter', 28); }
   }
   function topicFor(grade, lesson){
     for(var i=0;i<QUESTIONS.length;i++){ if(QUESTIONS[i].g === grade && QUESTIONS[i].l === lesson) return QUESTIONS[i].topic; }
@@ -205,6 +207,7 @@
       c.onclick = function(){ state.lesson = l; renderAll(); };
       lessonChips.appendChild(c);
     });
+    if(lessonsGradeShown !== state.grade){ lessonsGradeShown = state.grade; FX.stagger(lessonChips.children, 'enter', 40); }
   }
   function renderCountChips(){
     countChips.innerHTML = '';
@@ -309,6 +312,8 @@
       btn.onclick = function(){ handleAnswer(i, btn); };
       qOpts.appendChild(btn);
     });
+    FX.replay(qCard, 'q-in');
+    FX.stagger(qOpts.children, 'enter', 55);
     var first = qOpts.querySelector('.opt');
     if(first && document.activeElement && document.activeElement.classList.contains('opt')) first.focus();
   }
@@ -324,9 +329,13 @@
     if(isCorrect){
       state.score++; state.streak++; state.maxStreak = Math.max(state.maxStreak, state.streak);
       burstConfetti(rect.left + rect.width/2, rect.top + rect.height/2, 10);
+      FX.reward(btn);
+      FX.streak(state.streak, qCard.parentNode);
+      FX.replay(scoreCorrect, 'bump');
     } else {
       state.wrong++; state.streak = 0; state.review.push(q.src);
       qCard.classList.remove('shake'); void qCard.offsetWidth; qCard.classList.add('shake');
+      FX.replay(scoreWrong, 'bump');
     }
     allBtns.forEach(function(b, idx){
       b.disabled = true;
@@ -421,9 +430,9 @@
     ringLabel.textContent = pct >= 85 ? 'отлично' : pct >= 60 ? 'хорошо' : 'попробуй ещё';
     animateCount(resultPct, pct, '%');
     resultSub.textContent = pct >= 85 ? 'Невероятно! Ты мастер бизнеса!' : pct >= 60 ? 'Хороший результат, но есть куда расти' : 'Стоит вернуться к уроку и попробовать снова';
-    statTotal.textContent = total;
-    statCorrect.textContent = state.score;
-    statWrong.textContent = state.wrong;
+    FX.countUp(statTotal, total);
+    FX.countUp(statCorrect, state.score);
+    FX.countUp(statWrong, state.wrong);
 
     var key = keyFor(state.grade, state.lesson);
     var prevBest = parseInt(safeGet(key) || '0', 10);
@@ -448,6 +457,7 @@
         if(q.x) item.appendChild(el('div', 'rx', q.x));
         reviewList.appendChild(item);
       });
+      FX.stagger(reviewList.children, 'enter', 70);
     } else { reviewWrap.hidden = true; }
 
     showScreen('result');
@@ -469,11 +479,19 @@
   };
   function showScreen(name){
     Object.keys(screens).forEach(function(k){ screens[k].hidden = (k !== name); });
+    FX.replay(screens[name], 'screen-in');
     window.scrollTo(0, 0);
   }
 
   renderAll();
   QG.startBackground();
+  (function(){
+    var lessons = {}; QUESTIONS.forEach(function(q){ lessons[q.g + '/' + q.l] = 1; });
+    var data = [['hs-q', QUESTIONS.length], ['hs-l', Object.keys(lessons).length], ['hs-g', ALL_GRADES.length]];
+    data.forEach(function(d, i){ var el = document.getElementById(d[0]); el.textContent = d[1];
+      setTimeout(function(){ FX.countUp(el, d[1], '', 900); }, 150 + i * 120); });
+  })();
+  FX.spotlight();
 
   // offline support (GitHub Pages / any https host); skipped where service workers aren't allowed
   if('serviceWorker' in navigator && location.protocol === 'https:' && !/claude\.ai|claudeusercontent/.test(location.hostname)){

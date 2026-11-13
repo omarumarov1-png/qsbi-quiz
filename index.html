@@ -370,9 +370,94 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
 .ring-center .result-pct{margin:0;font-size:40px;}
 .ring-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
 </style>
+<style>
+/* Motion layer. The global prefers-reduced-motion rule switches all of it off. */
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+@keyframes qIn{from{opacity:0;transform:translateX(22px);}to{opacity:1;transform:none;}}
+.enter{animation:fadeUp .45s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * var(--step,45ms));}
+.screen-in{animation:fadeUp .35s cubic-bezier(.2,.8,.2,1) both;}
+.q-in{animation:qIn .4s cubic-bezier(.2,.8,.2,1) both;}
+.explain:not([hidden]){animation:fadeUp .3s ease both;}
+
+/* aurora behind everything */
+.aurora{position:fixed;inset:-25%;z-index:0;pointer-events:none;filter:blur(70px);opacity:.5;}
+.aurora i{position:absolute;width:46vmax;height:46vmax;border-radius:50%;}
+.aurora i:nth-child(1){background:rgba(124,92,255,.42);left:8%;top:4%;animation:drift1 26s ease-in-out infinite alternate;}
+.aurora i:nth-child(2){background:rgba(255,46,122,.28);right:2%;top:30%;animation:drift2 31s ease-in-out infinite alternate;}
+.aurora i:nth-child(3){background:rgba(0,229,168,.20);left:30%;bottom:0;animation:drift3 23s ease-in-out infinite alternate;}
+@keyframes drift1{to{transform:translate(18vw,22vh) scale(1.15);}}
+@keyframes drift2{to{transform:translate(-22vw,14vh) scale(.88);}}
+@keyframes drift3{to{transform:translate(12vw,-22vh) scale(1.2);}}
+
+/* pointer spotlight on cards */
+.card{position:relative;isolation:isolate;}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
+  background:radial-gradient(280px circle at var(--mx,-999px) var(--my,-999px),rgba(255,255,255,.07),transparent 62%);}
+
+/* hero */
+.hero{overflow:hidden;}
+.hero-kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);}
+.hero-title{font-family:var(--display);font-weight:700;font-size:23px;line-height:1.2;letter-spacing:-.01em;margin:8px 0 10px;text-wrap:balance;}
+.hl{background:linear-gradient(90deg,var(--mint),var(--blue),var(--violet),var(--pink),var(--mint));background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:hlFlow 6s linear infinite;}
+@keyframes hlFlow{to{background-position:300% 0;}}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;}
+.hero-stats div{border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;}
+.hero-stats b{font-family:var(--display);font-weight:600;font-size:22px;font-variant-numeric:tabular-nums;}
+.hero-stats span{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+.ticker{margin:16px -20px -20px;padding:12px 0;border-top:1px solid var(--line);overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);}
+.ticker-track{display:flex;gap:10px;width:max-content;animation:marquee 38s linear infinite;}
+.tk{white-space:nowrap;font-size:12.5px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 12px;}
+.tk:nth-child(3n+1){color:var(--blue);} .tk:nth-child(5n+2){color:var(--pink);}
+@keyframes marquee{to{transform:translateX(-50%);}}
+
+/* brand badge colour flow */
+.brand .badge{background-size:200% 200%;animation:badgeFlow 8s ease-in-out infinite alternate;}
+@keyframes badgeFlow{to{background-position:100% 100%;}}
+
+/* buttons: light sweep on the main action */
+.btn{position:relative;overflow:hidden;}
+.btn-primary:not([disabled])::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:sweep 3.4s ease-in-out infinite;}
+@keyframes sweep{0%,62%{left:-60%;}100%{left:130%;}}
+.tile:hover{box-shadow:0 10px 24px -12px rgba(124,92,255,.9);}
+.tile.active{animation:pop .3s ease;}
+@keyframes pop{40%{transform:scale(1.08);}}
+@keyframes wiggle{25%{transform:rotate(-12deg);}75%{transform:rotate(10deg);}}
+.lesson-chip:hover .ico{animation:wiggle .5s ease;}
+
+/* quiz */
+.progress-fill{background:linear-gradient(90deg,var(--mint),var(--blue),var(--violet),var(--mint));background-size:300% 100%;animation:flow 4s linear infinite;}
+@keyframes flow{to{background-position:300% 0;}}
+.bump{animation:bump .4s ease;}
+@keyframes bump{40%{transform:scale(1.35);}}
+.pill .pval{display:inline-block;}
+.q-mark{animation:float 7s ease-in-out infinite;}
+@keyframes float{50%{transform:translateY(8px) rotate(-8deg);}}
+.opt{position:relative;overflow:hidden;}
+.fx-ripple{position:absolute;left:50%;top:50%;width:20px;height:20px;margin:-10px;border-radius:50%;
+  background:rgba(0,229,168,.45);pointer-events:none;animation:ripple .75s ease-out forwards;}
+@keyframes ripple{to{transform:scale(30);opacity:0;}}
+.fx-plus{position:fixed;z-index:65;font-family:var(--display);font-weight:700;font-size:20px;color:var(--mint);pointer-events:none;
+  text-shadow:0 4px 16px rgba(0,229,168,.6);animation:plus .9s ease-out forwards;}
+@keyframes plus{0%{opacity:0;transform:translateY(6px) scale(.8);}20%{opacity:1;transform:translateY(0) scale(1.15);}100%{opacity:0;transform:translateY(-40px);}}
+.fx-streak{position:absolute;left:50%;top:-16px;z-index:5;transform:translateX(-50%);white-space:nowrap;
+  background:linear-gradient(135deg,var(--yellow),var(--pink));color:#16061C;font-weight:800;border-radius:999px;padding:7px 15px;
+  box-shadow:0 12px 26px -10px rgba(255,46,122,.75);animation:streakPop 1.5s ease forwards;}
+@keyframes streakPop{0%{opacity:0;transform:translate(-50%,10px) scale(.6);}15%{opacity:1;transform:translate(-50%,0) scale(1.08);}
+  25%{transform:translate(-50%,0) scale(1);}80%{opacity:1;}100%{opacity:0;transform:translate(-50%,-14px);}}
+
+/* results */
+.ring-wrap.top svg{animation:glow 2.4s ease-in-out infinite;}
+@keyframes glow{50%{filter:drop-shadow(0 0 16px rgba(0,229,168,.55));}}
+.ring-wrap svg{transform-origin:50% 50%;}
+#screen-result .ring-wrap{animation:fadeUp .5s cubic-bezier(.2,.8,.2,1) both;}
+</style>
 </head>
 <body>
 
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
 <canvas id="bg-symbols" aria-hidden="true"></canvas>
 <canvas id="confetti"></canvas>
 
@@ -390,9 +475,16 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
 
   <!-- ============ SETUP SCREEN ============ -->
   <div id="screen-setup">
-    <div class="card">
-      <p class="lede">Выбери класс и урок — и прыгай в квиз! Вопросы собраны из глоссариев, формул и
-      примеров твоих уроков по бизнес-образованию.</p>
+    <div class="card hero">
+      <div class="hero-kicker">Бизнес-образование QSBI</div>
+      <h2 class="hero-title">Проверь, что ты <span class="hl">реально</span> понял урок</h2>
+      <p class="lede">Выбери класс и урок. Вопросы собраны из глоссариев, формул и примеров твоих уроков по бизнес-образованию.</p>
+      <div class="hero-stats">
+        <div><b id="hs-q">0</b><span>вопросов</span></div>
+        <div><b id="hs-l">0</b><span>уроков</span></div>
+        <div><b id="hs-g">0</b><span>классов</span></div>
+      </div>
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span class="tk">ИПЦ</span><span class="tk">AIDA</span><span class="tk">SMART-цель</span><span class="tk">ROMI</span><span class="tk">CTR</span><span class="tk">PR-ход</span><span class="tk">Себестоимость</span><span class="tk">Подушка безопасности</span><span class="tk">Депозит</span><span class="tk">Целевая аудитория</span><span class="tk">Диаграмма Ганта</span><span class="tk">Сторителлинг</span><span class="tk">Капитализация</span><span class="tk">Слоган</span><span class="tk">₸</span><span class="tk">ИПЦ</span><span class="tk">AIDA</span><span class="tk">SMART-цель</span><span class="tk">ROMI</span><span class="tk">CTR</span><span class="tk">PR-ход</span><span class="tk">Себестоимость</span><span class="tk">Подушка безопасности</span><span class="tk">Депозит</span><span class="tk">Целевая аудитория</span><span class="tk">Диаграмма Ганта</span><span class="tk">Сторителлинг</span><span class="tk">Капитализация</span><span class="tk">Слоган</span><span class="tk">₸</span></div></div>
     </div>
 
     <div class="card">
@@ -516,6 +608,7 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
 <div class="toast" id="toast" role="status" hidden></div>
 <script src="questions.js"></script>
 <script src="graphics.js"></script>
+<script src="fx.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

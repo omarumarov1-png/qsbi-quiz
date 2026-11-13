@@ -10,7 +10,7 @@ for (const q of all) { const p = patch[q.q]; if (p) { used++; q.opts = [p.c || q
 const unused = Object.keys(patch).filter(k => !all.some(q => q.q === k));
 if (unused.length) console.warn("patch keys with no matching question:", unused);
 console.log("distractor patches applied:", used);
-const longer = require("./longer.js"); let lused = 0;
+const longer = Object.assign({}, require("./longer.js"), require("./longer-fixes.js")); let lused = 0;
 for (const q of all) { const L = longer[q.q]; if (L) { lused++; const d = q.opts.slice(1); const nm = t => t.toLowerCase().replace(/[«»"\.,—:!?]/g, "").trim();
       // replace the distractor that L extends (shared opening); otherwise the shortest one
       let k = d.findIndex(o => nm(L).startsWith(nm(o).slice(0, Math.min(14, nm(o).length))));
@@ -28,6 +28,13 @@ for (const q of all) {
   if (new Set(q.opts.map(o => o.trim().toLowerCase())).size !== q.opts.length) errs.push("duplicate option: " + q.q);
   const key = q.g + "|" + q.q.trim().toLowerCase();
   if (seen.has(key)) errs.push("duplicate question: " + q.q); seen.add(key);
+  // no option may be a word-for-word subset of another (e.g. "X" next to "X, и ещё Y")
+  const words = t => new Set(t.toLowerCase().replace(/[«»"\.,—:!?()]/g, " ").split(/\s+/).filter(w => w.length > 2));
+  q.opts.forEach((a, i) => q.opts.forEach((b, j) => {
+    if (i === j || /\d|→/.test(a + b)) return;
+    const A = words(a), B = words(b);
+    if (A.size >= 2 && A.size < B.size && [...A].every(w => B.has(w))) errs.push("option contained in another: " + q.q + " | " + a + " ⊂ " + b);
+  }));
   const lens = q.opts.map(o => o.length);
   if (lens[0] === Math.max(...lens) && lens.filter(l => l === lens[0]).length === 1) longest++;
 }
