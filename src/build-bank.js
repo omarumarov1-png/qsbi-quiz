@@ -3,7 +3,7 @@ const fs = require("fs"), vm = require("vm"), path = require("path");
 const ctx = {}; vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(__dirname, "original.js"), "utf8") + ";this.Q=QUESTIONS;", ctx);
 const orig = ctx.Q.map(q => ({ ...q, opts: [q.opts[q.correct], ...q.opts.filter((_, i) => i !== q.correct)] }));
-const fresh = [...require("./new-g1-4.js"), ...require("./new-g5-8.js"), ...require("./new-g9-11.js"), ...require("./new-topup.js")];
+const fresh = [...require("./new-g1-4.js"), ...require("./new-g5-8.js"), ...require("./new-g9-11.js"), ...require("./new-topup.js"), ...require("./new-l21-g1-3.js"), ...require("./new-l21-g4-6.js"), ...require("./new-l21-g7-9.js"), ...require("./new-l21-g10-11.js")];
 const all = [...orig, ...fresh].map(q => ({ g: q.g, l: q.l, topic: q.topic, q: q.q, opts: q.opts, ...(q.x ? { x: q.x } : {}) }));
 const patch = require("./distractors.js"); let used = 0;
 for (const q of all) { const p = patch[q.q]; if (p) { used++; q.opts = [p.c || q.opts[0], ...p.d]; } }
@@ -16,6 +16,19 @@ for (const q of all) { const L = longer[q.q]; if (L) { lused++; const d = q.opts
       let k = d.findIndex(o => nm(L).startsWith(nm(o).slice(0, Math.min(14, nm(o).length))));
       if (k < 0) { k = 0; d.forEach((o, i) => { if (o.length < d[k].length) k = i; }); }
       d[k] = L; q.opts = [q.opts[0], ...d]; } }
+// Grade-specific long distractors for lessons 21+ (key "g/l|question"), same placement rule.
+const longer21 = require("./longer-l21.js"); let l21 = 0;
+for (const q of all) { const L = longer21[q.g + "/" + q.l + "|" + q.q]; if (L) { l21++; const d = q.opts.slice(1); const nm = t => t.toLowerCase().replace(/[«»"\.,—:!?]/g, "").trim();
+  const wd = t => new Set(t.toLowerCase().replace(/[«»"\.,—:!?()]/g, " ").split(/\s+/).filter(w => w.length > 2));
+  const LW = wd(L);
+  // replace the distractor whose words L already contains (L is its longer version); else the one L extends; else the shortest
+  let k = d.findIndex(o => { const W = wd(o); return W.size >= 1 && [...W].every(w => LW.has(w)); });
+  if (k < 0) k = d.findIndex(o => nm(L).startsWith(nm(o).slice(0, Math.min(14, nm(o).length))));
+  if (k < 0) { k = 0; d.forEach((o, i) => { if (o.length < d[k].length) k = i; }); }
+  d[k] = L; q.opts = [q.opts[0], ...d]; } }
+const l21unused = Object.keys(longer21).filter(k => !all.some(q => q.g + "/" + q.l + "|" + q.q === k));
+if (l21unused.length) console.warn("longer-l21 keys with no matching question:", l21unused);
+console.log("lesson 21+ long distractors applied:", l21);
 const lunused = Object.keys(longer).filter(k => !all.some(q => q.q === k));
 if (lunused.length) console.warn("longer keys with no matching question:", lunused);
 console.log("long distractors applied:", lused);
