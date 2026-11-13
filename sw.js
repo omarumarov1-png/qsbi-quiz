@@ -1,5 +1,5 @@
 // Offline cache for QSBI Квиз-арена. Bump VERSION whenever questions.js / app.js / index.html change.
-const VERSION = "qsbi-quiz-v7";
+const VERSION = "qsbi-quiz-v8";
 const CORE = ["./", "index.html", "app.js", "graphics.js", "fx.js", "questions.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => {
