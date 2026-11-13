@@ -454,6 +454,76 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
 .ring-wrap svg{transform-origin:50% 50%;}
 #screen-result .ring-wrap{animation:fadeUp .5s cubic-bezier(.2,.8,.2,1) both;}
 </style>
+<style>
+/* Larger screens: a wider centred column with everything scaled up. Phones keep the base layout. */
+@media (min-width: 720px){
+  body{padding-block:36px 56px;}
+  .app{max-width:860px;gap:20px;}
+  .brand .badge{width:50px;height:50px;font-size:22px;border-radius:14px;}
+  .brand h1{font-size:24px;}
+  .brand .sub{font-size:12px;}
+  .card{padding:28px;border-radius:22px;}
+  .lede{font-size:16px;max-width:62ch;}
+  .hero-kicker{font-size:12px;}
+  .hero-title{font-size:34px;margin:10px 0 12px;}
+  .hero-stats{gap:14px;margin-top:20px;}
+  .hero-stats div{padding:14px 16px;}
+  .hero-stats b{font-size:30px;}
+  .ticker{margin:20px -28px -28px;padding:14px 0;}
+  .tk{font-size:14px;padding:7px 14px;}
+  .section-label{font-size:12.5px;margin-bottom:14px;}
+  .grid-grades{grid-template-columns:repeat(6,1fr);gap:12px;}
+  .tile{font-size:20px;padding:15px 0;border-radius:14px;}
+  .tile.all{grid-column:span 1;font-size:13px;}
+  .chip{font-size:15px;padding:11px 20px;}
+  #lesson-chips.with-topics{grid-template-columns:1fr 1fr;gap:10px;}
+  #lesson-chips.with-topics .chip:first-child{grid-column:1 / -1;}
+  #lesson-chips.with-topics .chip{padding:14px 16px;}
+  .lesson-chip .ico{width:22px;height:22px;}
+  .pool-line{font-size:15px;}
+  .pool-line strong{font-size:24px;}
+  .btn{font-size:18px;padding:19px 24px;border-radius:16px;}
+  footer{font-size:13px;}
+
+  .topic-tag{font-size:13px;padding:8px 16px;}
+  .topic-tag .ico{width:18px;height:18px;}
+  .progress-count{font-size:14px;}
+  .icon-btn{width:40px;height:40px;font-size:17px;}
+  .milestones,.progress-track{height:8px;}
+  .score-strip{gap:14px;}
+  .pill{padding:10px 14px;}
+  .pill .plabel{font-size:11px;}
+  .pill .pval{font-size:24px;}
+  .qcard{padding:30px;margin-top:18px;border-radius:20px;}
+  .q-mark{width:170px;height:170px;right:-24px;top:-24px;}
+  .qtext{font-size:27px;line-height:1.32;max-width:40ch;padding-right:90px;}
+  .opts{gap:14px;margin-top:24px;}
+  .opt{font-size:17px;padding:18px 18px;border-radius:14px;gap:14px;min-height:76px;}
+  .opt .letter{width:34px;height:34px;font-size:13px;border-radius:10px;}
+  .explain{font-size:16px;padding:16px 18px;margin-top:18px;}
+  .footline{margin-top:22px;}
+
+  .ring-wrap{width:220px;height:220px;}
+  .ring-center .result-pct{font-size:54px;}
+  .ring-label{font-size:12.5px;}
+  .result-sub{font-size:16px;}
+  .stat-box{padding:16px;}
+  .stat-box .num{font-size:30px;}
+  .stat-box .lbl{font-size:12px;}
+  .review-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .review-item{font-size:14.5px;padding:16px 18px;}
+  .quit-box{max-width:460px;padding:28px;}
+  .quit-title{font-size:22px;}
+  .quit-text{font-size:16px;}
+  .fx-plus{font-size:24px;}
+}
+@media (min-width: 1200px){
+  .app{max-width:1000px;}
+  .hero-title{font-size:40px;}
+  .qtext{font-size:30px;}
+  .opt{font-size:18px;min-height:84px;}
+}
+</style>
 </head>
 <body>
 
