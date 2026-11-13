@@ -1,0 +1,114 @@
+
+<canvas id="confetti"></canvas>
+<div class="bgshape s1"></div>
+<div class="bgshape s2"></div>
+<div class="bgshape s3"></div>
+<div class="bgshape s4"></div>
+
+<div class="app" id="app">
+
+  <div class="brand">
+    <div class="logo">
+      <div class="badge">Q</div>
+      <div>
+        <h1>QSBI Квиз-арена</h1>
+        <div class="sub">2 четверть · уроки 17–20</div>
+      </div>
+    </div>
+    <div class="mascot" id="mascot"><div class="head"><div class="eye l"></div><div class="eye r"></div><div class="mouth"></div></div></div>
+  </div>
+
+  <!-- ============ SETUP SCREEN ============ -->
+  <div id="screen-setup">
+    <div class="card">
+      <p class="lede">Выбери класс и урок — и прыгай в квиз! Вопросы собраны из глоссариев, формул и
+      примеров твоих уроков по бизнес-образованию.</p>
+    </div>
+
+    <div class="card">
+      <span class="section-label"><span class="dot"></span>Класс</span>
+      <div class="grid-grades" id="grade-grid"></div>
+    </div>
+
+    <div class="card">
+      <span class="section-label"><span class="dot"></span>Урок</span>
+      <div class="chip-row" id="lesson-chips"></div>
+    </div>
+
+    <div class="card">
+      <span class="section-label"><span class="dot"></span>Сколько вопросов</span>
+      <div class="chip-row" id="count-chips"></div>
+      <div class="divider" style="margin-top:16px;"></div>
+      <div class="pool-line" style="margin-top:12px;">
+        <span>Доступно вопросов</span>
+        <strong id="pool-count">0</strong>
+      </div>
+      <div id="best-line" class="best-badge" hidden></div>
+      <div style="margin-top:18px;">
+        <button class="btn btn-primary" id="start-btn" disabled>🚀 Начать квиз</button>
+      </div>
+    </div>
+
+    <footer>140 вопросов · все 11 классов · 44 урока КСП</footer>
+  </div>
+
+  <!-- ============ QUIZ SCREEN ============ -->
+  <div id="screen-quiz" hidden>
+    <div class="card">
+      <div class="progress-wrap">
+        <div class="progress-top">
+          <span class="topic-tag" id="q-topic-tag">—</span>
+          <span class="progress-count" id="progress-count">1 / 10</span>
+        </div>
+        <div class="milestones">
+          <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+          <div class="milestone-row" id="milestone-row"></div>
+        </div>
+      </div>
+      <div class="score-strip" style="margin-top:12px;">
+        <div class="pill correct"><div class="plabel">Верно</div><div class="pval" id="score-correct">0</div></div>
+        <div class="pill wrong"><div class="plabel">Ошибки</div><div class="pval" id="score-wrong">0</div></div>
+        <div class="pill streak" id="streak-pill"><div class="plabel">Серия 🔥</div><div class="pval" id="score-streak">0</div></div>
+      </div>
+      <div class="qcard" id="qcard">
+        <div class="qtext" id="q-text">—</div>
+        <div class="opts" id="q-opts"></div>
+      </div>
+      <div class="footline">
+        <button class="btn btn-primary" id="next-btn">Дальше →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RESULT SCREEN ============ -->
+  <div id="screen-result" hidden>
+    <div class="card">
+      <div class="result-hero">
+        <div class="medal" id="medal">
+          <div class="ribbon"><i></i><i></i></div>
+          <div class="disc" id="medal-disc">★</div>
+        </div>
+        <div class="result-pct" id="result-pct">0%</div>
+        <div class="result-sub" id="result-sub">—</div>
+      </div>
+      <div class="result-breakdown">
+        <div class="stat-box"><div class="num" id="stat-total">0</div><div class="lbl">вопросов</div></div>
+        <div class="stat-box"><div class="num" style="color:var(--mint)" id="stat-correct">0</div><div class="lbl">верно</div></div>
+        <div class="stat-box"><div class="num" style="color:var(--pink)" id="stat-wrong">0</div><div class="lbl">ошибок</div></div>
+      </div>
+      <div id="best-note" class="best-badge" style="display:block;text-align:center;margin:14px auto 0;max-width:fit-content;" hidden></div>
+
+      <div id="review-wrap" hidden>
+        <span class="section-label" style="display:inline-flex;margin-top:20px;"><span class="dot"></span>Разобрать ошибки</span>
+        <div class="review-list" id="review-list"></div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-ghost" id="change-btn">↺ Другое</button>
+        <button class="btn btn-primary" id="retry-btn">Ещё раз</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
