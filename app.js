@@ -175,15 +175,33 @@
       gradeGrid.appendChild(t);
     });
   }
+  function topicFor(grade, lesson){
+    for(var i=0;i<QUESTIONS.length;i++){ if(QUESTIONS[i].g === grade && QUESTIONS[i].l === lesson) return QUESTIONS[i].topic; }
+    return '';
+  }
   function renderLessonChips(){
     lessonChips.innerHTML = '';
     var avail = lessonsAvailable(state.grade);
-    var allChip = el('button', 'chip' + (state.lesson==='all' ? ' active' : ''), 'Все уроки');
+    var withTopics = state.grade !== 'all';
+    lessonChips.classList.toggle('with-topics', withTopics);
+    var allChip = el('button', 'chip' + (state.lesson==='all' ? ' active' : ''), withTopics ? 'Все уроки ' + state.grade + ' класса' : 'Все уроки');
     allChip.onclick = function(){ state.lesson='all'; renderAll(); };
     lessonChips.appendChild(allChip);
     ALL_LESSONS.forEach(function(l){
-      var c = el('button', 'chip' + (state.lesson===l ? ' active' : ''), 'Урок ' + l);
-      if(avail.indexOf(l) === -1){ c.disabled = true; }
+      var c;
+      if(withTopics){
+        var topic = topicFor(state.grade, l);
+        if(!topic) return;
+        c = el('button', 'chip lesson-chip' + (state.lesson===l ? ' active' : ''));
+        c.insertAdjacentHTML('beforeend', QG.icon(topic, 'ico'));
+        var lt = el('span', 'lt');
+        lt.appendChild(el('span', 'ln', 'Урок ' + l + ' · '));
+        lt.appendChild(document.createTextNode(topic));
+        c.appendChild(lt);
+      } else {
+        c = el('button', 'chip' + (state.lesson===l ? ' active' : ''), 'Урок ' + l);
+        if(avail.indexOf(l) === -1){ c.disabled = true; }
+      }
       c.onclick = function(){ state.lesson = l; renderAll(); };
       lessonChips.appendChild(c);
     });
@@ -278,7 +296,9 @@
     scoreStreak.textContent = state.streak;
     streakPill.classList.toggle('hot', state.streak >= 3);
 
-    qTopicTag.textContent = 'Класс ' + q.src.g + ' · Урок ' + q.src.l + ' · ' + q.src.topic;
+    qTopicTag.innerHTML = QG.icon(q.src.topic, 'ico');
+    qTopicTag.appendChild(document.createTextNode('Класс ' + q.src.g + ' · Урок ' + q.src.l + ' · ' + q.src.topic));
+    document.getElementById('q-mark').innerHTML = QG.icon(q.src.topic);
     qText.textContent = q.src.q;
 
     qOpts.innerHTML = '';
@@ -379,8 +399,8 @@
   var bestNote = document.getElementById('best-note');
   var reviewWrap = document.getElementById('review-wrap');
   var reviewList = document.getElementById('review-list');
-  var medal = document.getElementById('medal');
-  var medalDisc = document.getElementById('medal-disc');
+  var scoreRing = document.getElementById('score-ring');
+  var ringLabel = document.getElementById('ring-label');
 
   function animateCount(node, to, suffix){
     if(reduceMotion){ node.textContent = to + (suffix||''); return; }
@@ -397,11 +417,8 @@
     var partial = typeof answered === 'number' && answered < state.order.length;
     var total = partial ? answered : state.order.length;
     var pct = total ? Math.round(state.score/total*100) : 0;
-    medal.className = 'medal';
-    if(pct >= 85){ medalDisc.textContent = '🏆'; }
-    else if(pct >= 60){ medal.classList.add('silver'); medalDisc.textContent = '🥈'; }
-    else { medal.classList.add('bronze'); medalDisc.textContent = '🥉'; }
-
+    QG.ring(scoreRing, pct);
+    ringLabel.textContent = pct >= 85 ? 'отлично' : pct >= 60 ? 'хорошо' : 'попробуй ещё';
     animateCount(resultPct, pct, '%');
     resultSub.textContent = pct >= 85 ? 'Невероятно! Ты мастер бизнеса!' : pct >= 60 ? 'Хороший результат, но есть куда расти' : 'Стоит вернуться к уроку и попробовать снова';
     statTotal.textContent = total;
@@ -456,6 +473,7 @@
   }
 
   renderAll();
+  QG.startBackground();
 
   // offline support (GitHub Pages / any https host); skipped where service workers aren't allowed
   if('serviceWorker' in navigator && location.protocol === 'https:' && !/claude\.ai|claudeusercontent/.test(location.hostname)){

@@ -342,9 +342,38 @@ button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
 .quit-text{color:var(--muted);font-weight:600;line-height:1.5;margin:10px 0 18px;}
 .quit-actions{display:flex;flex-direction:column;gap:10px;}
 </style>
+<style>
+/* Graphics: symbol background, topic icons, score ring */
+canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
+.ico{width:1em;height:1em;flex:none;vertical-align:-0.15em;}
+.lesson-chip{display:inline-flex;align-items:center;gap:8px;text-align:left;max-width:100%;}
+.lesson-chip .ico{width:18px;height:18px;color:var(--pink);}
+.lesson-chip.active .ico{color:#05131B;}
+.lesson-chip .ln{font-family:var(--display);font-weight:600;font-size:12px;opacity:.75;}
+.lesson-chip .lt{min-width:0;}
+#lesson-chips.with-topics{display:grid;grid-template-columns:1fr;gap:8px;}
+#lesson-chips.with-topics .chip{border-radius:12px;padding:11px 14px;justify-content:flex-start;}
+.topic-tag{display:inline-flex;align-items:center;gap:7px;}
+.topic-tag .ico{width:15px;height:15px;color:var(--pink);}
+.qcard{position:relative;overflow:hidden;}
+.q-mark{position:absolute;right:-18px;top:-18px;width:120px;height:120px;color:var(--violet);opacity:.13;pointer-events:none;}
+.q-mark svg{width:100%;height:100%;stroke-width:1.2;}
+.qtext,.opts,.explain{position:relative;}
+.ring-wrap{position:relative;width:168px;height:168px;margin:4px auto 6px;}
+.ring-wrap svg{width:100%;height:100%;}
+.ring-bg{fill:none;stroke:rgba(255,255,255,.08);stroke-width:10;}
+.ring-fg{fill:none;stroke-width:10;stroke-linecap:round;}
+.ring-stop-a{stop-color:var(--mint);} .ring-stop-b{stop-color:var(--blue);}
+.ring-wrap.good .ring-stop-a{stop-color:var(--blue);} .ring-wrap.good .ring-stop-b{stop-color:var(--violet);}
+.ring-wrap.low .ring-stop-a{stop-color:var(--pink);} .ring-wrap.low .ring-stop-b{stop-color:var(--yellow);}
+.ring-center{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:4px;}
+.ring-center .result-pct{margin:0;font-size:40px;}
+.ring-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+</style>
 </head>
 <body>
 
+<canvas id="bg-symbols" aria-hidden="true"></canvas>
 <canvas id="confetti"></canvas>
 
 <div class="app" id="app">
@@ -418,6 +447,7 @@ button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
         <div class="pill streak" id="streak-pill"><div class="plabel">Серия 🔥</div><div class="pval" id="score-streak">0</div></div>
       </div>
       <div class="qcard" id="qcard">
+        <span class="q-mark" id="q-mark" aria-hidden="true"></span>
         <div class="qtext" id="q-text">—</div>
         <div class="opts" id="q-opts"></div>
         <div class="explain" id="q-explain" aria-live="polite" hidden></div>
@@ -432,11 +462,21 @@ button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
   <div id="screen-result" hidden>
     <div class="card">
       <div class="result-hero">
-        <div class="medal" id="medal">
-          <div class="ribbon"><i></i><i></i></div>
-          <div class="disc" id="medal-disc">★</div>
+        <div class="ring-wrap" id="score-ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="ring-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" class="ring-stop-a"/><stop offset="1" class="ring-stop-b"/>
+              </linearGradient>
+            </defs>
+            <circle class="ring-bg" cx="60" cy="60" r="52"/>
+            <circle class="ring-fg" cx="60" cy="60" r="52" stroke="url(#ring-grad)" transform="rotate(-90 60 60)"/>
+          </svg>
+          <div class="ring-center">
+            <div class="result-pct" id="result-pct">0%</div>
+            <div class="ring-label" id="ring-label">результат</div>
+          </div>
         </div>
-        <div class="result-pct" id="result-pct">0%</div>
         <div class="result-sub" id="result-sub">—</div>
       </div>
       <div class="result-breakdown">
@@ -475,6 +515,7 @@ button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
 </div>
 <div class="toast" id="toast" role="status" hidden></div>
 <script src="questions.js"></script>
+<script src="graphics.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
