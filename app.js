@@ -90,11 +90,6 @@
     return { src: q, opts: idx.map(function(i){ return q.opts[i]; }), correct: idx.indexOf(0) };
   }
 
-  function setMascot(mode){
-    var m = document.getElementById('mascot');
-    m.className = 'mascot' + (mode ? ' ' + mode : '');
-    if(mode){ setTimeout(function(){ m.classList.remove(mode); }, 650); }
-  }
 
   var toastEl = document.getElementById('toast'), toastTimer;
   function toast(msg){
@@ -120,7 +115,7 @@
   function resizeCanvas(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
-  var CONFETTI_COLORS = ['#FF2E7A','#FFC93C','#00E5A8','#3FC6FF','#FFFFFF'];
+  var CONFETTI_COLORS = ['#FF2E7A','#7C5CFF','#00E5A8','#3FC6FF'];
   function burstConfetti(x, y, count){
     if(reduceMotion) return;
     count = count || 26;
@@ -308,11 +303,9 @@
 
     if(isCorrect){
       state.score++; state.streak++; state.maxStreak = Math.max(state.maxStreak, state.streak);
-      setMascot('happy');
-      burstConfetti(rect.left + rect.width/2, rect.top + rect.height/2, 22);
+      burstConfetti(rect.left + rect.width/2, rect.top + rect.height/2, 10);
     } else {
       state.wrong++; state.streak = 0; state.review.push(q.src);
-      setMascot('sad');
       qCard.classList.remove('shake'); void qCard.offsetWidth; qCard.classList.add('shake');
     }
     allBtns.forEach(function(b, idx){
@@ -344,6 +337,8 @@
   // keyboard: 1–4 or А–Г / A–D to answer, Enter for next
   document.addEventListener('keydown', function(e){
     if(screens.quiz.hidden || e.altKey || e.ctrlKey || e.metaKey) return;
+    if(e.key === 'Escape'){ e.preventDefault(); if(quitPanel.hidden) openQuit(); else closeQuit(); return; }
+    if(!quitPanel.hidden) return;
     var map = {'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3,'а':0,'б':1,'в':2,'г':3};
     var k = (e.key || '').toLowerCase();
     if(k in map && !state.locked){
@@ -353,6 +348,27 @@
       e.preventDefault(); nextBtn.click();
     }
   });
+
+  // ---------- quit at any time ----------
+  var quitPanel = document.getElementById('quit-panel');
+  var quitText = document.getElementById('quit-text');
+  var quitResults = document.getElementById('quit-results');
+  function answeredCount(){ return state.idx + (state.locked ? 1 : 0); }
+  function openQuit(){
+    var n = answeredCount();
+    quitText.textContent = n
+      ? 'Отвечено ' + n + ' из ' + state.order.length + '. Можно посмотреть итоги по отвеченным вопросам или выйти в меню.'
+      : 'Вы ещё не ответили ни на один вопрос. Выйти в меню?';
+    quitResults.hidden = n === 0;
+    quitPanel.hidden = false;
+    (n ? quitResults : document.getElementById('quit-menu')).focus();
+  }
+  function closeQuit(){ quitPanel.hidden = true; document.getElementById('quit-btn').focus({preventScroll:true}); }
+  document.getElementById('quit-btn').onclick = openQuit;
+  document.getElementById('quit-cancel').onclick = closeQuit;
+  quitPanel.addEventListener('click', function(e){ if(e.target === quitPanel) closeQuit(); });
+  quitResults.onclick = function(){ var n = answeredCount(); quitPanel.hidden = true; finishQuiz(n); };
+  document.getElementById('quit-menu').onclick = function(){ quitPanel.hidden = true; showScreen('setup'); renderAll(); };
 
   // ---------- RESULT SCREEN ----------
   var resultPct = document.getElementById('result-pct');
@@ -377,8 +393,9 @@
     requestAnimationFrame(step);
   }
 
-  function finishQuiz(){
-    var total = state.order.length;
+  function finishQuiz(answered){
+    var partial = typeof answered === 'number' && answered < state.order.length;
+    var total = partial ? answered : state.order.length;
     var pct = total ? Math.round(state.score/total*100) : 0;
     medal.className = 'medal';
     if(pct >= 85){ medalDisc.textContent = '🏆'; }
@@ -394,7 +411,9 @@
     var key = keyFor(state.grade, state.lesson);
     var prevBest = parseInt(safeGet(key) || '0', 10);
     bestNote.hidden = false;
-    if(pct > prevBest){
+    if(partial){
+      bestNote.textContent = 'Квиз завершён досрочно: ' + total + ' из ' + state.order.length + ' вопросов. В рекорд не идёт.';
+    } else if(pct > prevBest){
       safeSet(key, String(pct));
       bestNote.textContent = prevBest ? ('🏅 Новый рекорд! (было ' + prevBest + '%)') : '🏅 Первый результат сохранён!';
     } else {
