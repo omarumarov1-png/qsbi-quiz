@@ -21,11 +21,22 @@
     review: [], locked: false, current: null
   };
 
-  // ---------- deep links: ?g=5&l=20&n=10 ----------
+  // ---------- deep links ----------
+  // GitHub Pages: ?g=5&l=20&n=10   ·   claude.ai artifact (only a plain #name survives): #g5-l20-n10
+  var USE_HASH = /claude\.ai|claudeusercontent/.test(location.hostname);
   (function readParams(){
-    var p;
-    try{ p = new URLSearchParams(location.search); }catch(e){ return; }
-    var g = parseInt(p.get('g'),10), l = parseInt(p.get('l'),10), n = p.get('n');
+    var g, l, n;
+    var h = (location.hash || '').replace('#','');
+    var m;
+    if((m = h.match(/(?:^|-)g(\d+)/))) g = parseInt(m[1],10);
+    if((m = h.match(/(?:^|-)l(\d+)/))) l = parseInt(m[1],10);
+    if((m = h.match(/(?:^|-)n(\d+|max)/))) n = m[1];
+    try{
+      var p = new URLSearchParams(location.search);
+      if(p.get('g')) g = parseInt(p.get('g'),10);
+      if(p.get('l')) l = parseInt(p.get('l'),10);
+      if(p.get('n')) n = p.get('n');
+    }catch(e){}
     if(ALL_GRADES.indexOf(g) !== -1) state.grade = g;
     if(ALL_LESSONS.indexOf(l) !== -1) state.lesson = l;
     if(n === 'max') state.count = 'max';
@@ -33,6 +44,13 @@
   })();
   function linkFor(){
     var base = location.href.split('?')[0].split('#')[0];
+    if(USE_HASH){
+      var hp = [];
+      if(state.grade !== 'all') hp.push('g' + state.grade);
+      if(state.lesson !== 'all') hp.push('l' + state.lesson);
+      if(state.count !== 10) hp.push('n' + state.count);
+      return base + (hp.length ? '#' + hp.join('-') : '');
+    }
     var parts = [];
     if(state.grade !== 'all') parts.push('g=' + state.grade);
     if(state.lesson !== 'all') parts.push('l=' + state.lesson);
@@ -40,7 +58,12 @@
     return base + (parts.length ? '?' + parts.join('&') : '');
   }
   function syncUrl(){
-    try{ history.replaceState(null, '', linkFor()); }catch(e){}
+    try{
+      if(USE_HASH){
+        var h = linkFor().split('#')[1] || '';
+        if(('#' + h) !== location.hash) history.replaceState(null, '', h ? '#' + h : location.pathname + location.search);
+      } else { history.replaceState(null, '', linkFor()); }
+    }catch(e){}
   }
 
   function filterPool(grade, lesson){
@@ -77,6 +100,16 @@
   function toast(msg){
     toastEl.textContent = msg; toastEl.hidden = false;
     clearTimeout(toastTimer); toastTimer = setTimeout(function(){ toastEl.hidden = true; }, 2200);
+  }
+  // when the clipboard is refused: show the link as selectable text for 8 seconds
+  function toastLink(url){
+    toastEl.textContent = '';
+    toastEl.appendChild(document.createTextNode('Скопируйте ссылку: '));
+    var inp = document.createElement('input');
+    inp.id = 'share-url'; inp.readOnly = true; inp.value = url; inp.className = 'toast-input';
+    toastEl.appendChild(inp); toastEl.hidden = false;
+    inp.focus(); inp.select();
+    clearTimeout(toastTimer); toastTimer = setTimeout(function(){ toastEl.hidden = true; }, 8000);
   }
 
   // ---------- confetti ----------
@@ -192,10 +225,10 @@
       navigator.share({ title: 'QSBI Квиз-арена', text: 'Квиз: ' + label, url: url }).catch(function(){});
       return;
     }
-    var done = function(){ toast('Ссылка скопирована: ' + label); };
+    var showLink = function(){ toastLink(url); };
     if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(url).then(done, function(){ prompt('Скопируйте ссылку:', url); });
-    } else { prompt('Скопируйте ссылку:', url); }
+      navigator.clipboard.writeText(url).then(function(){ toast('Ссылка скопирована: ' + label); }, showLink);
+    } else { showLink(); }
   };
 
   function startRun(){
