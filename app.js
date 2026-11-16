@@ -352,7 +352,7 @@
     scoreWrong.textContent = state.wrong;
     scoreStreak.textContent = state.streak;
     streakPill.classList.toggle('hot', state.streak >= 3);
-    nextBtn.textContent = (state.idx === state.order.length-1) ? 'Итоги 🏁' : 'Дальше →';
+    nextBtn.innerHTML = (state.idx === state.order.length-1) ? 'Итоги ' + ICON('flag') : 'Дальше →';
     nextBtn.classList.add('show');
     nextBtn.focus({preventScroll:true});
   }
@@ -441,7 +441,7 @@
       bestNote.textContent = 'Квиз завершён досрочно: ' + total + ' из ' + state.order.length + ' вопросов. В рекорд не идёт.';
     } else if(pct > prevBest){
       safeSet(key, String(pct));
-      bestNote.textContent = prevBest ? ('🏅 Новый рекорд! (было ' + prevBest + '%)') : '🏅 Первый результат сохранён!';
+      bestNote.innerHTML = ICON('medal') + ' ' + (prevBest ? ('Новый рекорд! (было ' + prevBest + '%)') : 'Первый результат сохранён!');
     } else {
       bestNote.textContent = '★ Лучший результат: ' + prevBest + '%';
     }

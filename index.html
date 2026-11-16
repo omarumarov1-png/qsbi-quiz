@@ -541,7 +541,7 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
         <div class="sub">2 четверть · уроки 17–32</div>
       </div>
     </div>
-    <a class="club-btn" href="club.html" aria-label="Бизнес-клуб QSBI NextGen">🚀 <span class="w">Бизнес-клуб</span><span class="s">Клуб</span></a>
+    <a class="club-btn" href="club.html" aria-label="Бизнес-клуб QSBI NextGen"><i data-ic="rocket"></i> <span class="w">Бизнес-клуб</span><span class="s">Клуб</span></a>
     <style>
       .club-btn{flex:none;display:inline-flex;align-items:center;gap:6px;padding:10px 14px;border-radius:12px;text-decoration:none;color:#fff;font-family:var(--body);font-weight:800;font-size:14px;background:linear-gradient(135deg,var(--pink),var(--violet));box-shadow:0 10px 24px -12px rgba(255,46,122,.7)}
       .club-btn:hover{filter:brightness(1.1)}
@@ -553,14 +553,16 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
   <!-- ============ SETUP SCREEN ============ -->
   <div id="screen-setup">
     <a class="card club-banner" href="club.html">
-      <span class="club-e" aria-hidden="true">🚀</span>
+      <span class="club-e" aria-hidden="true" data-ic="rocket"></span>
       <span class="club-t"><b>Бизнес-клуб QSBI NextGen</b><span>Генератор бизнес-идей, кейсы, симулятор 10 000 ₸ и командные квизы · 5–11 классы</span></span>
       <span class="club-go" aria-hidden="true">→</span>
     </a>
     <style>
       .club-banner{display:flex;align-items:center;gap:14px;padding:16px 18px;margin-bottom:16px;text-decoration:none;color:var(--ink);background:linear-gradient(120deg,rgba(255,46,122,.22),rgba(124,92,255,.22) 55%,rgba(0,229,168,.18));border:1px solid rgba(255,255,255,.18)}
       .club-banner:hover{border-color:rgba(255,255,255,.4)}
-      .club-e{font-size:28px;flex:none}
+      .club-e{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff}
+      .ic{width:1.1em;height:1.1em;vertical-align:-.2em;flex:none}
+      .plabel .ic{color:var(--yellow)}
       .club-t{flex:1;min-width:0}
       .club-t b{display:block;font-family:var(--display);font-size:16px}
       .club-t span{color:var(--muted);font-size:13.5px;font-weight:600}
@@ -598,10 +600,10 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
       </div>
       <div id="best-line" class="best-badge" hidden></div>
       <div style="margin-top:18px;">
-        <button class="btn btn-primary" id="start-btn" disabled>🚀 Начать квиз</button>
+        <button class="btn btn-primary" id="start-btn" disabled><i data-ic="rocket"></i> Начать квиз</button>
       </div>
       <div class="share-row">
-        <button class="btn btn-ghost" id="share-btn">🔗 Ссылка на этот квиз</button>
+        <button class="btn btn-ghost" id="share-btn"><i data-ic="link"></i> Ссылка на этот квиз</button>
       </div>
     </div>
 
@@ -627,7 +629,7 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
       <div class="score-strip" style="margin-top:12px;">
         <div class="pill correct"><div class="plabel">Верно</div><div class="pval" id="score-correct">0</div></div>
         <div class="pill wrong"><div class="plabel">Ошибки</div><div class="pval" id="score-wrong">0</div></div>
-        <div class="pill streak" id="streak-pill"><div class="plabel">Серия 🔥</div><div class="pval" id="score-streak">0</div></div>
+        <div class="pill streak" id="streak-pill"><div class="plabel">Серия <i data-ic="flame"></i></div><div class="pval" id="score-streak">0</div></div>
       </div>
       <div class="qcard" id="qcard">
         <span class="q-mark" id="q-mark" aria-hidden="true"></span>
@@ -697,6 +699,7 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
   </div>
 </div>
 <div class="toast" id="toast" role="status" hidden></div>
+<script src="icons.js"></script>
 <script src="questions.js"></script>
 <script src="graphics.js"></script>
 <script src="fx.js"></script>

@@ -62,6 +62,19 @@ button{font-family:inherit;color:inherit}
 .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .stack{display:flex;flex-direction:column;gap:14px}
+/* icons (inline SVG, no emoji font needed) */
+.ic{width:1.1em;height:1.1em;vertical-align:-.2em;flex:none}
+.tabs a .ic{color:var(--pink);margin-right:2px}
+.tabs a[aria-current="page"] .ic{color:var(--violet)}
+.tile .e{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;color:#D7CCFF;background:linear-gradient(135deg,rgba(124,92,255,.32),rgba(255,46,122,.22));border:1px solid rgba(255,255,255,.12)}
+.grid > :nth-child(3n+2) .e{color:#9FF3DA;background:linear-gradient(135deg,rgba(0,229,168,.26),rgba(63,198,255,.18))}
+.grid > :nth-child(3n) .e{color:#FFE29A;background:linear-gradient(135deg,rgba(255,201,60,.26),rgba(255,46,122,.18))}
+.tag .ic,.btn .ic,.chip .ic{font-size:1.05em}
+.explain .ic.ok{color:var(--mint)} .explain .ic.no{color:var(--pink)}
+.crazy .ic,.fact .ic,.event .ic{color:var(--yellow)}
+.tdot{display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:6px;vertical-align:.02em}
+.tdot.r{background:#FF4D6D}.tdot.b{background:#3FC6FF}.tdot.g{background:#00E5A8}.tdot.y{background:#FFC93C}
+
 /* quiz */
 .qhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .tag{font-size:12px;font-weight:800;padding:6px 10px;border-radius:999px;background:rgba(124,92,255,.22);color:#D9CFFF}
@@ -132,11 +145,12 @@ footer{color:var(--muted);font-size:13px;text-align:center;font-weight:600}
     <div class="row"><div class="xp" id="xp" title="Игровые очки клуба"></div><a class="back" href="index.html">← Квиз-арена</a></div>
   </div>
   <nav class="tabs" aria-label="Разделы">
-    <a href="#quiz" data-t="quiz">🧠 Квизы</a><a href="#ideas" data-t="ideas">💡 Идеи</a><a href="#cases" data-t="cases">🎯 Кейсы</a><a href="#games" data-t="games">🎲 Игры</a><a href="#meetings" data-t="meetings">🗓️ Встречи</a>
+    <a href="#quiz" data-t="quiz"><i data-ic="brain"></i> Квизы</a><a href="#ideas" data-t="ideas"><i data-ic="bulb"></i> Идеи</a><a href="#cases" data-t="cases"><i data-ic="target"></i> Кейсы</a><a href="#games" data-t="games"><i data-ic="dice"></i> Игры</a><a href="#meetings" data-t="meetings"><i data-ic="calendar"></i> Встречи</a>
   </nav>
   <main id="view" class="stack"></main>
   <footer>Бизнес-клуб QSBI NextGen · по мотивам программы «От идеи — к своему первому бизнесу»</footer>
 </div>
+<script src="icons.js"></script>
 <script src="club/data-quiz-1.js"></script>
 <script src="club/data-quiz-2.js"></script>
 <script src="club/data-quiz-3.js"></script>

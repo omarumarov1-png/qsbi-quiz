@@ -73,11 +73,11 @@ window.CLUB_MEETINGS = [
 window.CLUB_SIM = {
   start: 10000, rounds: 3, table: 2000,
   products: [
-    {id:"lemon", n:"Лимонад", e:"🍋", cost:120, ref:400, demand:40},
-    {id:"cookie", n:"Печенье", e:"🍪", cost:150, ref:350, demand:45},
-    {id:"bracelet", n:"Браслеты", e:"📿", cost:300, ref:900, demand:14},
-    {id:"sticker", n:"Стикерпаки", e:"✨", cost:200, ref:600, demand:22},
-    {id:"candle", n:"Свечи", e:"🕯️", cost:700, ref:2000, demand:8}
+    {id:"lemon", n:"Лимонад", e:"lemon", cost:120, ref:400, demand:40},
+    {id:"cookie", n:"Печенье", e:"cookie", cost:150, ref:350, demand:45},
+    {id:"bracelet", n:"Браслеты", e:"beads", cost:300, ref:900, demand:14},
+    {id:"sticker", n:"Стикерпаки", e:"sticker", cost:200, ref:600, demand:22},
+    {id:"candle", n:"Свечи", e:"candle", cost:700, ref:2000, demand:8}
   ],
   events: [
     {t:"Солнечный день — к вам тянется очередь!", k:1.3, only:["lemon"]},
