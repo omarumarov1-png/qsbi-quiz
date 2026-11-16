@@ -46,7 +46,7 @@
       tile('#games/sell', ICON('cart'), '«Продай мне…»', 'Предмет + неожиданный покупатель') +
       tile('#games/objection', ICON('shield'), 'Возражение дня', 'Тренируем ответы клиентам') +
       tile('#meetings', ICON('calendar'), '36 встреч клуба', 'Готовая игра к каждой встрече') + '</div>' +
-      '<section class="card"><div class="label">Путь резидента</div><div class="grid">' + MODS.slice(1).map(function (m, i) { return '<a class="tile" href="#quiz/' + (i + 1) + '"><span class="e">' + m.e + '</span><b>' + (i + 1) + '. ' + m.c + '</b><span>' + m.t + '</span></a>'; }).join('') + '</div></section>';
+      '<section class="card"><div class="label">Путь резидента</div><div class="grid">' + MODS.slice(1).map(function (m, i) { return '<a class="tile" href="#quiz/' + (i + 1) + '"><span class="e">' + ICON(m.e) + '</span><b>' + (i + 1) + '. ' + m.c + '</b><span>' + m.t + '</span></a>'; }).join('') + '</div></section>';
   }
   function tile(h, e, b, s) { return '<a class="tile" href="' + h + '"><span class="e">' + e + '</span><b>' + b + '</b><span>' + s + '</span></a>'; }
 
@@ -217,7 +217,7 @@
       view.innerHTML = html; view.onclick = function (e) { if (e.target.closest('[data-reset]')) { sm = null; sim(); } }; return;
     }
     if (!sm.prod) {
-      html += '<p class="lede" style="margin:0">Раунд 1 из ' + SIM.rounds + '. Выберите продукт. Аренда стола — ' + money(SIM.table) + ' за раунд.</p><div class="grid">' + SIM.products.map(function (p) { return '<button class="tile" data-p="' + p.id + '"><span class="e">' + p.e + '</span><b>' + p.n + '</b><span>себестоимость ' + money(p.cost) + ' · обычно продают по ~' + money(p.ref) + '</span></button>'; }).join('') + '</div></section>';
+      html += '<p class="lede" style="margin:0">Раунд 1 из ' + SIM.rounds + '. Выберите продукт. Аренда стола — ' + money(SIM.table) + ' за раунд.</p><div class="grid">' + SIM.products.map(function (p) { return '<button class="tile" data-p="' + p.id + '"><span class="e">' + ICON(p.e) + '</span><b>' + p.n + '</b><span>себестоимость ' + money(p.cost) + ' · обычно продают по ~' + money(p.ref) + '</span></button>'; }).join('') + '</div></section>';
       view.innerHTML = html; view.onclick = function (e) { var t = e.target.closest('[data-p]'); if (t) { sm.prod = SIM.products.filter(function (p) { return p.id === t.dataset.p; })[0]; sm.price = sm.prod.ref; sm.qty = Math.min(Math.round(sm.prod.demand / 2), Math.floor((sm.cash - SIM.table) / sm.prod.cost)); sim(); } }; return;
     }
     var p = sm.prod, maxQ = Math.max(0, Math.floor((sm.cash - SIM.table) / p.cost));
