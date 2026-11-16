@@ -120,7 +120,7 @@
       for(var i=0;i<parts.length;i++){
         var p = parts[i];
         ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot);
-        ctx.font = '600 ' + p.s.toFixed(0) + 'px Unbounded, Manrope, system-ui, sans-serif';
+        ctx.font = '600 ' + p.s.toFixed(0) + 'px QSym, Unbounded, Manrope, system-ui, sans-serif';
         ctx.fillStyle = 'rgba(' + p.c + ',' + p.a.toFixed(3) + ')';
         ctx.fillText(p.g, 0, 0);
         ctx.restore();
