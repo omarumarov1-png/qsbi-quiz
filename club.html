@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>QSBI NextGen · Бизнес-клуб</title>
+<meta name="description" content="Бизнес-клуб QSBI NextGen для 5–11 классов: квизы по 9 модулям, бесконечный генератор бизнес-идей, кейсы, симулятор «Запусти бизнес с 10 000 ₸» и игры для встреч.">
+<meta name="theme-color" content="#0D0B1E">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0D0B1E; --surface:#16132E; --surface2:#1E1A3D; --line:rgba(255,255,255,.11); --ink:#FFFFFF; --muted:#B6ABE6;
+  --pink:#FF2E7A; --yellow:#FFC93C; --mint:#00E5A8; --blue:#3FC6FF; --violet:#7C5CFF; --red:#FF5C5C;
+  --display:'Unbounded','Manrope',system-ui,sans-serif; --body:'Manrope',system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:500 16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right));padding-block:18px 60px;min-height:100vh;
+  background:radial-gradient(900px 520px at 85% -8%,rgba(124,92,255,.24),transparent 62%),radial-gradient(760px 460px at -12% 108%,rgba(255,46,122,.13),transparent 60%),
+  linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px) 0 0/28px 28px,var(--bg);background-attachment:fixed}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+button{font-family:inherit;color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.app{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.badge{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--violet));font:700 15px var(--display)}
+.brand b{display:block;font:700 18px/1.1 var(--display)}
+.brand span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.back{color:var(--muted);text-decoration:none;font-weight:700;font-size:14px}
+.xp{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 6px}
+.xp i{font-style:normal;font:700 11px var(--display);padding:6px 10px;border-radius:999px;background:var(--yellow);color:#1b1300;letter-spacing:.04em}
+.xp span{font-weight:800;font-size:14px}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.tabs a{flex:none;text-decoration:none;color:var(--ink);background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:800;font-size:14px}
+.tabs a[aria-current="page"]{background:#fff;color:var(--bg);border-color:#fff}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 22px 44px -26px rgba(0,0,0,.85)}
+.kick{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--pink)}
+.hero h1{font-size:clamp(26px,5vw,40px);line-height:1.08;margin-top:10px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--pink),var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--muted);font-weight:600;margin:12px 0 0;max-width:42em}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
+.tile{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:16px;min-width:0;cursor:pointer;text-align:left}
+.tile:hover{border-color:rgba(255,255,255,.3)}
+.tile .e{font-size:26px}
+.tile b{font:700 15px/1.25 var(--display)}
+.tile span{color:var(--muted);font-size:14px}
+.label{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:2px 0 10px;display:flex;align-items:center;gap:8px}
+.label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--surface2);border-radius:999px;padding:9px 14px;font-weight:800;font-size:14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--blue);color:#05131B;border-color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:14px 20px;font-weight:800;font-size:16px;cursor:pointer;text-decoration:none}
+.btn-primary{background:var(--mint);color:#05140F;box-shadow:0 12px 26px -12px rgba(0,229,168,.65)}
+.btn-pink{background:var(--pink);color:#fff}
+.btn-yellow{background:var(--yellow);color:#1b1300}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.stack{display:flex;flex-direction:column;gap:14px}
+/* quiz */
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.tag{font-size:12px;font-weight:800;padding:6px 10px;border-radius:999px;background:rgba(124,92,255,.22);color:#D9CFFF}
+.bar{height:8px;border-radius:4px;background:var(--surface2);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--pink),var(--yellow),var(--mint));transition:width .3s}
+.qtext{font:600 clamp(19px,3.4vw,26px)/1.3 var(--display)}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;border:1px solid var(--line);background:var(--surface2);border-radius:14px;padding:14px 16px;font-weight:700;font-size:16px;cursor:pointer;display:flex;gap:12px;align-items:flex-start}
+.opt .l{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:rgba(255,255,255,.08);font:700 13px var(--display)}
+.opt:hover:not([disabled]){border-color:rgba(255,255,255,.35)}
+.opt.ok{background:rgba(0,229,168,.16);border-color:var(--mint)}
+.opt.bad{background:rgba(255,46,122,.16);border-color:var(--pink)}
+.opt[disabled]{cursor:default}
+.explain{border-left:3px solid var(--yellow);background:rgba(255,201,60,.08);border-radius:0 12px 12px 0;padding:12px 14px;font-weight:600}
+.teams{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.team{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface2)}
+.team.on{border-color:var(--yellow);box-shadow:0 0 0 2px rgba(255,201,60,.35)}
+.team b{display:block;font:700 22px var(--display)}
+.team span{font-size:13px;color:var(--muted);font-weight:700}
+.big{font:700 clamp(40px,9vw,72px)/1 var(--display)}
+/* ideas */
+.idea{position:relative;overflow:hidden}
+.idea::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,46,122,.35),transparent 70%)}
+.idea h2{font-size:clamp(22px,4.2vw,32px);line-height:1.15;margin:8px 0 10px;position:relative}
+.idea p{margin:0;color:#E6E0FF;font-weight:600;font-size:17px;position:relative}
+.facts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));margin-top:16px;position:relative}
+.fact{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.fact small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:2px}
+.crazy{margin-top:14px;padding:12px 14px;border-radius:12px;background:rgba(255,201,60,.12);border:1px dashed rgba(255,201,60,.5);font-weight:700;position:relative}
+.saved{display:grid;gap:8px}
+.saved div{display:flex;justify-content:space-between;gap:10px;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-weight:700}
+.saved button{background:none;border:0;color:var(--muted);cursor:pointer;text-decoration:underline;font-size:13px}
+.count{font-size:13px;color:var(--muted);font-weight:700}
+/* cases */
+.case-res{border-radius:14px;padding:14px 16px;font-weight:600}
+.pts{font:700 14px var(--display);color:var(--yellow)}
+/* games */
+.timer{font:700 clamp(64px,16vw,140px)/1 var(--display);text-align:center;letter-spacing:-.02em}
+.timer.low{color:var(--pink)}
+.prompt{font:700 clamp(22px,4.6vw,36px)/1.2 var(--display);text-align:center}
+.prompt em{font-style:normal;color:var(--yellow)}
+.sim-table{width:100%;border-collapse:collapse;font-size:15px}
+.sim-table td,.sim-table th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left}
+.sim-table th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+input[type=range]{width:100%;accent-color:var(--mint)}
+.money{font:700 28px var(--display);color:var(--mint)}
+.money.neg{color:var(--pink)}
+.event{padding:12px 14px;border-radius:12px;background:rgba(63,198,255,.12);border:1px solid rgba(63,198,255,.4);font-weight:700}
+/* meetings */
+details.meet{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 16px}
+details.meet summary{cursor:pointer;list-style:none;padding:14px 0;display:flex;gap:12px;align-items:center;font-weight:800}
+details.meet summary::-webkit-details-marker{display:none}
+details.meet summary .n{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.08);font:700 13px var(--display)}
+details.meet summary small{display:block;color:var(--muted);font-weight:700}
+details.meet .body{padding:0 0 16px 46px;color:#E6E0FF;font-weight:600}
+details.meet .body p{margin:0 0 8px}
+.mod-h{display:flex;align-items:baseline;gap:10px;margin:18px 0 8px}
+.mod-h b{font:700 18px var(--display)}
+.mod-h span{color:var(--muted);font-weight:700;font-size:14px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#fff;color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:800;z-index:50}
+footer{color:var(--muted);font-size:13px;text-align:center;font-weight:600}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <a class="brand" href="#"><div class="badge">QSBI</div><div><b>Бизнес-клуб</b><span>QSBI NextGen · 5–11 классы</span></div></a>
+    <div class="row"><div class="xp" id="xp" title="Игровые очки клуба"></div><a class="back" href="index.html">← Квиз-арена</a></div>
+  </div>
+  <nav class="tabs" aria-label="Разделы">
+    <a href="#quiz" data-t="quiz">🧠 Квизы</a><a href="#ideas" data-t="ideas">💡 Идеи</a><a href="#cases" data-t="cases">🎯 Кейсы</a><a href="#games" data-t="games">🎲 Игры</a><a href="#meetings" data-t="meetings">🗓️ Встречи</a>
+  </nav>
+  <main id="view" class="stack"></main>
+  <footer>Бизнес-клуб QSBI NextGen · по мотивам программы «От идеи — к своему первому бизнесу»</footer>
+</div>
+<script src="club/data-quiz-1.js"></script>
+<script src="club/data-quiz-2.js"></script>
+<script src="club/data-quiz-3.js"></script>
+<script src="club/data-long.js"></script>
+<script src="club/data-ideas.js"></script>
+<script src="club/data-games.js"></script>
+<script src="club/club.js"></script>
+</body>
+</html>
