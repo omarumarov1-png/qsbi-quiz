@@ -176,7 +176,7 @@
     var bar = document.getElementById('pbar');
     if (!bar) {
       bar = document.createElement('div'); bar.id = 'pbar'; bar.className = 'pbar';
-      bar.innerHTML = '<button class="pbtn" data-p="exit" aria-label="Выйти из показа">' + ic('cross') + '</button><span class="pcount"></span>' +
+      bar.innerHTML = '<button class="pbtn" data-p="exit" aria-label="Выйти из показа" title="Кликер и клавиши: вперёд/назад — PageDown/PageUp или стрелки · F5 — начать показ · B — чёрный экран · Enter — показать ответы · Esc — выйти">' + ic('cross') + '</button><span class="pcount"></span>' +
         '<button class="pbtn" data-p="full" aria-label="Во весь экран">' + ic('expand') + '</button>' +
         '<button class="pbtn" data-p="prev" aria-label="Назад">' + ic('chevl') + '</button><button class="pbtn" data-p="next" aria-label="Дальше">' + ic('chevr') + '</button>';
       document.body.appendChild(bar);
@@ -190,7 +190,7 @@
     present = -1;
     document.body.classList.remove('presenting');
     app.querySelectorAll('.slide.on').forEach(function (el) { el.classList.remove('on'); });
-    var bar = document.getElementById('pbar'); if (bar) bar.remove();
+    var bar = document.getElementById('pbar'); if (bar) bar.remove(); blackout(false);
     if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function () {});
     if (!fromRoute && cur) history.replaceState(null, '', '#g' + cur.g + '-l' + cur.l);
   }
@@ -199,6 +199,7 @@
   document.addEventListener('click', function (e) {
     var t = e.target.closest('[data-reveal]');
     if (t) { var s = t.closest('.slide'); var on = s.classList.toggle('shown'); t.querySelector('span').textContent = on ? 'Скрыть ответы' : 'Показать ответы'; return; }
+    if (e.target.id === 'blackout') { blackout(false); return; }
     var f = e.target.closest('.flip'); if (f) { f.classList.toggle('turned'); return; }
     var p = e.target.closest('[data-p]');
     if (p) {
@@ -209,12 +210,27 @@
       if (a === 'full') { var el = document.documentElement; if (document.fullscreenElement) document.exitFullscreen().catch(function () {}); else if (el.requestFullscreen) el.requestFullscreen().catch(function () {}); }
     }
   });
+  // Presentation clickers are keyboards: next/prev = PageDown/PageUp (or arrows), «start show» = F5 / Shift+F5,
+  // «black screen» = B or «.», start/stop toggles with Esc. Map them like PowerPoint does.
+  function blackout(on) {
+    var b = document.getElementById('blackout');
+    if (on === undefined) on = !b;
+    if (on && !b) { b = document.createElement('div'); b.id = 'blackout'; b.className = 'blackout'; document.body.appendChild(b); }
+    if (!on && b) b.remove();
+  }
   document.addEventListener('keydown', function (e) {
+    var k = e.key;
+    if (k === 'F5' && cur) { e.preventDefault(); return openPresent(e.shiftKey && present >= 0 ? present : 0); }
     if (present < 0) return;
-    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); step(1); }
-    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); step(-1); }
-    if (e.key === 'Escape') closePresent();
-    if (e.key === 'Enter') { var s = app.querySelector('.slide.on [data-reveal]'); if (s) s.click(); }
+    // like PowerPoint: any key on the black screen just brings the same slide back
+    if (document.getElementById('blackout') && k !== 'F5') { e.preventDefault(); blackout(false); return; }
+    if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || k === ' ' || k === 'n' || k === 'N') { e.preventDefault(); step(1); }
+    else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp' || k === 'Backspace' || k === 'p' || k === 'P') { e.preventDefault(); step(-1); }
+    else if (k === 'Home') { e.preventDefault(); openPresent(0); }
+    else if (k === 'End') { e.preventDefault(); openPresent(slides.length - 1); }
+    else if (/^[bB.иИюЮ]$/.test(k)) { e.preventDefault(); blackout(true); }
+    else if (k === 'Escape') closePresent();
+    else if (k === 'Enter') { var s = app.querySelector('.slide.on [data-reveal]'); if (s) s.click(); }
   });
   // swipe on touch boards / phones
   var x0 = null;

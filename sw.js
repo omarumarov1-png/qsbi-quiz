@@ -1,5 +1,5 @@
 // Offline cache for QSBI Квиз-арена. Bump VERSION whenever questions.js / app.js / index.html change.
-const VERSION = "qsbi-quiz-v12";
+const VERSION = "qsbi-quiz-v13";
 const CORE = ["./", "index.html", "app.js", "graphics.js", "fx.js", "questions.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png",
   "icons.js", "club.html", "club/club.js", "club/data-quiz-1.js", "club/data-quiz-2.js", "club/data-quiz-3.js", "club/data-long.js", "club/data-ideas.js", "club/data-games.js",
   "lessons.html", "lessons/lessons.js", "lessons/data/index.js"];
