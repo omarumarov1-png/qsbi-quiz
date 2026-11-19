@@ -547,10 +547,13 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
         <div class="sub">2 четверть · уроки 17–32</div>
       </div>
     </div>
-    <a class="club-btn" href="club.html" aria-label="Бизнес-клуб QSBI NextGen"><i data-ic="rocket"></i> <span class="w">Бизнес-клуб</span><span class="s">Клуб</span></a>
+    <div class="top-links"><a class="club-btn lessons-btn" href="lessons.html" aria-label="Уроки QSBI: теория, слайды и презентации"><i data-ic="book"></i> <span class="w">Уроки</span><span class="s">Уроки</span></a>
+    <a class="club-btn" href="club.html" aria-label="Бизнес-клуб QSBI NextGen"><i data-ic="rocket"></i> <span class="w">Бизнес-клуб</span><span class="s">Клуб</span></a></div>
     <style>
       .club-btn{flex:none;display:inline-flex;align-items:center;gap:6px;padding:10px 14px;border-radius:12px;text-decoration:none;color:#fff;font-family:var(--body);font-weight:800;font-size:14px;background:linear-gradient(135deg,var(--pink),var(--violet));box-shadow:0 10px 24px -12px rgba(255,46,122,.7)}
       .club-btn:hover{filter:brightness(1.1)}
+      .top-links{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+      .lessons-btn{background:linear-gradient(135deg,#00B386,#2F7BFF);box-shadow:0 10px 24px -12px rgba(0,229,168,.6)}
       .club-btn .s{display:none}
       @media (max-width:480px){.club-btn{padding:9px 11px;font-size:13px}.club-btn .w{display:none}.club-btn .s{display:inline}}
     </style>
@@ -558,6 +561,11 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
 
   <!-- ============ SETUP SCREEN ============ -->
   <div id="screen-setup">
+    <a class="card club-banner lessons-banner" href="lessons.html">
+      <span class="club-e" aria-hidden="true" data-ic="book"></span>
+      <span class="club-t"><b>Уроки QSBI · 1–11 классы</b><span>Теория, словарь, разминки и задания с ответами · показ на доске · презентации для скачивания</span></span>
+      <span class="club-go" aria-hidden="true">→</span>
+    </a>
     <a class="card club-banner" href="club.html">
       <span class="club-e" aria-hidden="true" data-ic="rocket"></span>
       <span class="club-t"><b>Бизнес-клуб QSBI NextGen</b><span>Генератор бизнес-идей, кейсы, симулятор 10 000 ₸ и командные квизы · 5–11 классы</span></span>
@@ -566,6 +574,8 @@ canvas#bg-symbols{position:fixed;inset:0;z-index:0;pointer-events:none;}
     <style>
       .club-banner{display:flex;align-items:center;gap:14px;padding:16px 18px;margin-bottom:16px;text-decoration:none;color:var(--ink);background:linear-gradient(120deg,rgba(255,46,122,.22),rgba(124,92,255,.22) 55%,rgba(0,229,168,.18));border:1px solid rgba(255,255,255,.18)}
       .club-banner:hover{border-color:rgba(255,255,255,.4)}
+      .lessons-banner{background:linear-gradient(120deg,rgba(0,229,168,.2),rgba(47,123,255,.2) 55%,rgba(124,92,255,.16))}
+      .lessons-banner .club-e{background:linear-gradient(135deg,#00B386,#2F7BFF)}
       .club-e{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff}
       .ic{width:1.1em;height:1.1em;vertical-align:-.2em;flex:none}
       .plabel .ic{color:var(--yellow)}
