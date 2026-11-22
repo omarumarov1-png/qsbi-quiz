@@ -176,7 +176,7 @@
     var bar = document.getElementById('pbar');
     if (!bar) {
       bar = document.createElement('div'); bar.id = 'pbar'; bar.className = 'pbar';
-      bar.innerHTML = '<button class="pbtn" data-p="exit" aria-label="Выйти из показа" title="Кликер и клавиши: вперёд/назад — PageDown/PageUp или стрелки · F5 — начать показ · B — чёрный экран · Enter — показать ответы · Esc — выйти">' + ic('cross') + '</button><span class="pcount"></span>' +
+      bar.innerHTML = '<button class="pbtn" data-p="exit" aria-label="Выйти из показа" title="Кликер: ▶/◀ — слайды · ▶▶ — показать ответы · ◀◀ — первый слайд · держать ▶/◀ — прокрутка · нижняя кнопка — показ/выход · верхняя — чёрный экран. Клавиатура: стрелки, Enter — ответы, Esc — выйти">' + ic('cross') + '</button><span class="pcount"></span>' +
         '<button class="pbtn" data-p="full" aria-label="Во весь экран">' + ic('expand') + '</button>' +
         '<button class="pbtn" data-p="prev" aria-label="Назад">' + ic('chevl') + '</button><button class="pbtn" data-p="next" aria-label="Дальше">' + ic('chevr') + '</button>';
       document.body.appendChild(bar);
@@ -236,6 +236,30 @@
   var x0 = null;
   document.addEventListener('touchstart', function (e) { if (present >= 0) x0 = e.touches[0].clientX; }, { passive: true });
   document.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 60) step(dx < 0 ? 1 : -1); });
+
+  // presentation clicker (clicker.js): on the board ▶/◀ change slides, ▶▶ shows the answers, ◀◀ goes to the first
+  // slide, holding scrolls a long slide; the bottom button starts/ends the board view of the open lesson
+  window.QSBI_CLICKER = {
+    presenting: function () { return present >= 0; },
+    next: function () { if (present < 0) return false; step(1); return true; },
+    prev: function () { if (present < 0) return false; step(-1); return true; },
+    select: function () {
+      if (present < 0) return false;
+      var b = app.querySelector('.slide.on [data-reveal]');
+      if (b) { b.click(); window.QSBI_CLICKER_API.say(app.querySelector('.slide.on').classList.contains('shown') ? 'Ответы' : 'Ответы скрыты'); }
+      else window.QSBI_CLICKER_API.say('На этом слайде нет ответов');
+      return true;
+    },
+    back: function () { if (present < 0) return false; openPresent(0); window.QSBI_CLICKER_API.say('Первый слайд'); return true; },
+    start: function () {
+      if (!cur) return false;
+      openPresent(present >= 0 ? present : 0);
+      var el = document.documentElement; if (!document.fullscreenElement && el.requestFullscreen) el.requestFullscreen().catch(function () {});
+      return true;
+    },
+    stop: function () { if (present < 0) return false; closePresent(); return true; },
+    scroller: function () { return present >= 0 ? app.querySelector('.slide.on') : null; }
+  };
 
   window.addEventListener('hashchange', route);
   route();

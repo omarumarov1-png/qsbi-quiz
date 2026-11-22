@@ -363,12 +363,12 @@
     else { finishQuiz(); }
   };
 
-  // keyboard: 1–4 or А–Г / A–D to answer, Enter for next
+  // keyboard: 1–4 or А–Г to answer, Enter for next (Latin a–d left: a presentation clicker sends "b" for its black-screen button)
   document.addEventListener('keydown', function(e){
     if(screens.quiz.hidden || e.altKey || e.ctrlKey || e.metaKey) return;
     if(e.key === 'Escape'){ e.preventDefault(); if(quitPanel.hidden) openQuit(); else closeQuit(); return; }
     if(!quitPanel.hidden) return;
-    var map = {'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3,'а':0,'б':1,'в':2,'г':3};
+    var map = {'1':0,'2':1,'3':2,'4':3,'а':0,'б':1,'в':2,'г':3};
     var k = (e.key || '').toLowerCase();
     if(k in map && !state.locked){
       var b = qOpts.querySelectorAll('.opt')[map[k]];
@@ -377,6 +377,14 @@
       e.preventDefault(); nextBtn.click();
     }
   });
+
+  // presentation clicker (clicker.js): on a question it walks only the answer options, after answering only «Дальше»
+  window.QSBI_CLICKER = {
+    items: function(){
+      if(screens.quiz.hidden || !quitPanel.hidden) return null;
+      return state.locked ? (nextBtn.classList.contains('show') ? [nextBtn] : []) : Array.prototype.slice.call(qOpts.querySelectorAll('.opt'));
+    }
+  };
 
   // ---------- quit at any time ----------
   var quitPanel = document.getElementById('quit-panel');
