@@ -146,7 +146,7 @@
           '<p class="big"><b>' + esc(a.question) + '</b></p>' +
           '<div class="votes">' + a.options.map(function (o, i) { return '<button class="vote" data-vote><span class="vl">' + LETTER[i] + '</span><span class="vt">' + esc(o) + '</span><span class="vc">0</span></button>'; }).join('') + '</div>' +
           '<p class="sub vhint">Нажимайте на вариант, чтобы посчитать поднятые руки.</p>' +
-          '<div class="note gold">' + ic('users') + '<span><b>Командам:</b> ' + esc(a.teams) + '</span></div>' + timer(a.minutes), 'spractice');
+          '<div class="note gold">' + ic('users') + '<span><b>Задание командам:</b> ' + esc(a.teams.replace(/^Команды:\s*/, '')) + '</span></div>' + timer(a.minutes), 'spractice');
         add('case2', 'Практикум ' + no + 'реальный кейс', 'Что было на самом деле',
           '<div class="votes done">' + a.options.map(function (o, i) { return '<div class="vote' + (i === a.answerIndex ? ' right' : '') + '"><span class="vl">' + LETTER[i] + '</span><span class="vt">' + esc(o) + '</span>' + (i === a.answerIndex ? ic('check') : '') + '</div>'; }).join('') + '</div>' +
           '<p class="big">' + esc(a.reveal) + '</p>' +
@@ -205,7 +205,7 @@
     var bar = document.getElementById('pbar');
     if (!bar) {
       bar = document.createElement('div'); bar.id = 'pbar'; bar.className = 'pbar';
-      bar.innerHTML = '<button class="pbtn" data-p="exit" aria-label="Выйти из показа" title="Кликер: ▶/◀ — слайды · ▶▶ — показать ответы · ◀◀ — первый слайд · держать ▶/◀ — прокрутка · нижняя кнопка — показ/выход · верхняя — чёрный экран. Клавиатура: стрелки, Enter — ответы, Esc — выйти">' + ic('cross') + '</button><span class="pcount"></span>' +
+      bar.innerHTML = '<button class="pbtn" data-p="exit" aria-label="Выйти из показа" title="Кликер: ▶/◀ — слайды · ▶▶ — показать ответы (на сценке и кейсе — таймер) · ◀◀ — первый слайд · держать ▶/◀ — прокрутка · нижняя кнопка — показ/выход · верхняя — чёрный экран. Клавиатура: стрелки, Enter — ответы, Esc — выйти">' + ic('cross') + '</button><span class="pcount"></span>' +
         '<button class="pbtn" data-p="full" aria-label="Во весь экран">' + ic('expand') + '</button>' +
         '<button class="pbtn" data-p="prev" aria-label="Назад">' + ic('chevl') + '</button><button class="pbtn" data-p="next" aria-label="Дальше">' + ic('chevr') + '</button>';
       document.body.appendChild(bar);
@@ -290,6 +290,12 @@
     prev: function () { if (present < 0) return false; step(-1); return true; },
     select: function () {
       if (present < 0) return false;
+      var tm = app.querySelector('.slide.on [data-timer]');
+      if (tm && !app.querySelector('.slide.on [data-reveal]')) {
+        tm.click(); var box = tm.closest('.ptimer');
+        window.QSBI_CLICKER_API.say(box.classList.contains('run') ? 'Таймер пошёл' : 'Таймер на паузе');
+        return true;
+      }
       var b = app.querySelector('.slide.on [data-reveal]');
       if (b) { b.click(); window.QSBI_CLICKER_API.say(app.querySelector('.slide.on').classList.contains('shown') ? 'Ответы' : 'Ответы скрыты'); }
       else window.QSBI_CLICKER_API.say('На этом слайде нет ответов');
