@@ -209,8 +209,12 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding-top:8px}
 .role{background:var(--surface2);border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .role.c1{border-top-color:var(--pink)} .role.c2{border-top-color:var(--mint)} .role.c3{border-top-color:var(--yellow)}
 .role b{font:700 16px/1.2 var(--display)} .role p{margin:0;color:#E2DCFF;font-weight:600;font-size:15px}
-.ptimer{display:flex;align-items:center;gap:12px}
-.ptimer.run [data-timer]{background:var(--mint);font-variant-numeric:tabular-nums;font-size:22px;padding:14px 22px}
+.ptimer{display:flex;justify-content:flex-end;margin-top:10px}
+.tbtn{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid currentColor;color:inherit;opacity:.55;border-radius:999px;padding:6px 12px;font:700 14px/1 inherit;cursor:pointer}
+.tbtn:hover,.tbtn:focus-visible{opacity:1}
+.tbtn svg{width:16px;height:16px}
+.ptimer.run .tbtn,.ptimer.end .tbtn{opacity:1}
+.ptimer.run [data-timer]{background:var(--mint);color:#0d0b1e;border-color:transparent;font-variant-numeric:tabular-nums;font-size:20px;padding:10px 18px}
 .ptimer.end [data-timer]{background:var(--red);color:#fff;animation:tpulse .6s ease-in-out 4 alternate}
 @keyframes tpulse{to{transform:scale(1.06)}}
 .twist{background:rgba(255,46,122,.12);border:1px solid rgba(255,46,122,.45);border-radius:14px;padding:14px 16px}

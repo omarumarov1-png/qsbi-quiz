@@ -127,7 +127,7 @@
 
     // ---- practice: every scene / case is two slides (do it → talk it through)
     var LETTER = ['А', 'Б', 'В', 'Г'];
-    var timer = function (min) { return '<div class="ptimer" data-min="' + min + '"><button class="btn btn-yellow" data-timer>' + ic('timer') + ' <span>Таймер ' + min + ':00</span></button></div>'; };
+    var timer = function (min) { return '<div class="ptimer" data-min="' + min + '"><button class="tbtn" data-timer title="Таймер по желанию">' + ic('timer') + ' <span>' + min + ' мин</span></button></div>'; };
     (L.practice || []).forEach(function (a, n) {
       var no = (L.practice.length > 1 ? (n + 1) + '/' + L.practice.length + ' · ' : '');
       if (a.type === 'scene') {
