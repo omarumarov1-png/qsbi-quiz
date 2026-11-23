@@ -125,6 +125,35 @@
         var v = L[x[0]]; return '<div class="pcard c' + (i ? 2 : 1) + '"><span class="lab">' + ic(x[1]) + ' ' + x[2] + '</span>' + esc(v.text) + (v.link ? '<em class="link">Связь с темой: ' + esc(v.link) + '</em>' : '') + '</div>'; }).join('') + '</div>');
     if (L.fact) add('fact', 'А вы знали?', 'Интересный факт из мира бизнеса', '<p class="big fact">' + ic('sparkles') + ' ' + esc(L.fact) + '</p>', 'sdark');
 
+    // ---- practice: every scene / case is two slides (do it → talk it through)
+    var LETTER = ['А', 'Б', 'В', 'Г'];
+    var timer = function (min) { return '<div class="ptimer" data-min="' + min + '"><button class="tbtn" data-timer title="Таймер по желанию">' + ic('timer') + ' <span>' + min + ' мин</span></button></div>'; };
+    (L.practice || []).forEach(function (a, n) {
+      var no = (L.practice.length > 1 ? (n + 1) + '/' + L.practice.length + ' · ' : '');
+      if (a.type === 'scene') {
+        add('scene', 'Практикум ' + no + 'сценка · ' + a.minutes + ' мин', '«' + a.title + '»',
+          '<p class="big">' + esc(a.setting) + '</p>' +
+          '<div class="roles">' + a.roles.map(function (r, i) { return '<div class="role c' + (i % 4) + '"><b>' + esc(r.name) + '</b><p>' + esc(r.task) + '</p></div>'; }).join('') + '</div>' +
+          '<ol class="flow">' + a.steps.map(function (s, i) { return '<li><span class="n">' + (i + 1) + '</span><p>' + esc(s) + '</p></li>'; }).join('') + '</ol>' + timer(a.minutes), 'spractice');
+        add('scene2', 'Практикум ' + no + 'стоп-кадр', 'Стоп! Что сейчас происходит?',
+          '<div class="pcards">' + a.freeze.map(function (q) { return '<div class="pcard c1"><span class="lab">' + ic('eye') + ' Стоп-кадр</span>' + esc(q) + '</div>'; }).join('') + '</div>' +
+          (a.twist ? '<div class="twist"><span class="lab">' + ic('bolt') + ' Поворот</span><p>' + esc(a.twist) + '</p></div>' : '') +
+          '<div class="note gold">' + ic('brain') + '<span><b>Разбор:</b> ' + a.debrief.map(esc).join(' · ') + '</span></div>', 'spractice');
+      } else if (a.type === 'case') {
+        add('case', 'Практикум ' + no + 'реальный кейс · ' + a.minutes + ' мин', a.title,
+          '<p class="hook">' + esc(a.hook) + '</p>' +
+          '<div class="story">' + a.story.map(function (s) { return '<p>' + esc(s) + '</p>'; }).join('') + '<span class="src">' + ic('book') + ' ' + esc(a.source) + '</span></div>' +
+          '<p class="big"><b>' + esc(a.question) + '</b></p>' +
+          '<div class="votes">' + a.options.map(function (o, i) { return '<button class="vote" data-vote><span class="vl">' + LETTER[i] + '</span><span class="vt">' + esc(o) + '</span><span class="vc">0</span></button>'; }).join('') + '</div>' +
+          '<p class="sub vhint">Нажимайте на вариант, чтобы посчитать поднятые руки.</p>' +
+          '<div class="note gold">' + ic('users') + '<span><b>Задание командам:</b> ' + esc(a.teams.replace(/^Команды:\s*/, '')) + '</span></div>' + timer(a.minutes), 'spractice');
+        add('case2', 'Практикум ' + no + 'реальный кейс', 'Что было на самом деле',
+          '<div class="votes done">' + a.options.map(function (o, i) { return '<div class="vote' + (i === a.answerIndex ? ' right' : '') + '"><span class="vl">' + LETTER[i] + '</span><span class="vt">' + esc(o) + '</span>' + (i === a.answerIndex ? ic('check') : '') + '</div>'; }).join('') + '</div>' +
+          '<p class="big">' + esc(a.reveal) + '</p>' +
+          '<div class="note gold">' + ic('bulb') + '<span><b>Вывод:</b> ' + esc(a.takeaway) + '</span></div>', 'spractice');
+      }
+    });
+
     (L.cards || []).forEach(function (c) {
       var lines = c.lines.map(function (l) { var m = l.match(/^([А-ЯЁA-Za-zа-яё ]{3,20}):\s*(.*)$/); return '<li>' + (m ? '<b>' + esc(m[1]) + ':</b> ' + esc(m[2]) : esc(l)) + '</li>'; }).join('');
       var ans = c.answers.length ? '<div class="answers ans"><span class="lab">' + ic('check') + ' Ответы для проверки</span><ul>' + c.answers.map(function (a, i) {
@@ -176,7 +205,7 @@
     var bar = document.getElementById('pbar');
     if (!bar) {
       bar = document.createElement('div'); bar.id = 'pbar'; bar.className = 'pbar';
-      bar.innerHTML = '<button class="pbtn" data-p="exit" aria-label="Выйти из показа" title="Кликер: ▶/◀ — слайды · ▶▶ — показать ответы · ◀◀ — первый слайд · держать ▶/◀ — прокрутка · нижняя кнопка — показ/выход · верхняя — чёрный экран. Клавиатура: стрелки, Enter — ответы, Esc — выйти">' + ic('cross') + '</button><span class="pcount"></span>' +
+      bar.innerHTML = '<button class="pbtn" data-p="exit" aria-label="Выйти из показа" title="Кликер: ▶/◀ — слайды · ▶▶ — показать ответы (на сценке и кейсе — таймер) · ◀◀ — первый слайд · держать ▶/◀ — прокрутка · нижняя кнопка — показ/выход · верхняя — чёрный экран. Клавиатура: стрелки, Enter — ответы, Esc — выйти">' + ic('cross') + '</button><span class="pcount"></span>' +
         '<button class="pbtn" data-p="full" aria-label="Во весь экран">' + ic('expand') + '</button>' +
         '<button class="pbtn" data-p="prev" aria-label="Назад">' + ic('chevl') + '</button><button class="pbtn" data-p="next" aria-label="Дальше">' + ic('chevr') + '</button>';
       document.body.appendChild(bar);
@@ -196,7 +225,23 @@
   }
   function step(d) { if (present >= 0) openPresent(present + d); }
 
+  // board timer (per slide) and vote counters
+  var timers = new WeakMap();
+  function runTimer(box) {
+    var t = timers.get(box), btn = box.querySelector('[data-timer] span');
+    if (t && t.id) { clearInterval(t.id); t.id = null; btn.textContent = 'Продолжить ' + fmt(t.left); box.classList.remove('run'); return; }
+    if (!t || t.left <= 0) t = { left: +box.dataset.min * 60 };
+    box.classList.add('run'); box.classList.remove('end');
+    t.id = setInterval(function () {
+      t.left--; btn.textContent = fmt(t.left);
+      if (t.left <= 0) { clearInterval(t.id); t.id = null; box.classList.remove('run'); box.classList.add('end'); btn.textContent = 'Время! Ещё раз?'; }
+    }, 1000);
+    btn.textContent = fmt(t.left); timers.set(box, t);
+  }
+  function fmt(s) { return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
   document.addEventListener('click', function (e) {
+    var tb = e.target.closest('[data-timer]'); if (tb) { runTimer(tb.closest('.ptimer')); return; }
+    var v = e.target.closest('[data-vote]'); if (v) { var c = v.querySelector('.vc'); c.textContent = +c.textContent + 1; v.classList.add('hit'); setTimeout(function () { v.classList.remove('hit'); }, 200); return; }
     var t = e.target.closest('[data-reveal]');
     if (t) { var s = t.closest('.slide'); var on = s.classList.toggle('shown'); t.querySelector('span').textContent = on ? 'Скрыть ответы' : 'Показать ответы'; return; }
     if (e.target.id === 'blackout') { blackout(false); return; }
@@ -245,6 +290,12 @@
     prev: function () { if (present < 0) return false; step(-1); return true; },
     select: function () {
       if (present < 0) return false;
+      var tm = app.querySelector('.slide.on [data-timer]');
+      if (tm && !app.querySelector('.slide.on [data-reveal]')) {
+        tm.click(); var box = tm.closest('.ptimer');
+        window.QSBI_CLICKER_API.say(box.classList.contains('run') ? 'Таймер пошёл' : 'Таймер на паузе');
+        return true;
+      }
       var b = app.querySelector('.slide.on [data-reveal]');
       if (b) { b.click(); window.QSBI_CLICKER_API.say(app.querySelector('.slide.on').classList.contains('shown') ? 'Ответы' : 'Ответы скрыты'); }
       else window.QSBI_CLICKER_API.say('На этом слайде нет ответов');

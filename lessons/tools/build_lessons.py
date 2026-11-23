@@ -155,6 +155,10 @@ def lesson(D, key):
     if D.get("global"): L["world"] = strip_kz(D["global"])
     if D.get("fact"): L["fact"] = re.sub(r"\s*\((?:проверить|источник)[^)]*\)", "", D["fact"], flags=re.I).strip()
     L["cards"] = [card(cd, i, D) for i, cd in enumerate(c2 for c2 in D.get("cards") or [] if not STOCK_WARM.search(c2["title"]))]
+    # practice: scenes (grades 1–4) and real-world cases (5–11), written separately in q2/practice/<key>.json
+    pf = os.path.join(SRC, "practice", key + ".json")
+    if os.path.exists(pf):
+        L["practice"] = json.load(open(pf, encoding="utf-8"))["activities"]
     for k in ("homework", "support", "advanced"):
         if D.get(k): L[k] = D[k]
     # photo + discussion
