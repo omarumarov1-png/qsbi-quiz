@@ -1,0 +1,160 @@
+0 ¦ What is a product? ¦ A thing that is made and sold ¦ A service that is given for free ¦ An advert for a new product ¦ Money paid for work ¦
+1 ¦ Where do a few people usually work and make a lot by hand? ¦ In a workshop ¦ At a plant ¦ On an assembly line ¦ In a supermarket ¦
+2 ¦ An assembly line is… ¦ A belt that moves parts from one worker to the next ¦ A warehouse where finished goods are kept before shipping ¦ A big warehouse where finished goods wait to be taken to all the shops in town ¦ A craftsman who makes a thing from start to finish himself ¦
+3 ¦ What kind of goods are bread and milk? ¦ Food goods ¦ Manufactured goods ¦ Advertising goods ¦ Digital goods ¦
+4 ¦ What kind of goods are clothes and furniture? ¦ Manufactured goods ¦ Food goods ¦ Edible goods ¦ Natural goods ¦
+5 ¦ A shoemaker repairs shoes alone in a small room. Where does he work? ¦ In a workshop ¦ At a plant ¦ At a factory ¦ On an assembly line ¦ In a workshop few people work, and a lot is done by hand.
+6 ¦ 1,000 identical toys must be made very quickly. Where will it be faster? ¦ At a factory with an assembly line ¦ At one craftsman's home, if he works day and night ¦ In a café ¦ In a toy shop ¦ An assembly line passes parts from worker to worker, so many identical things are made quickly.
+7 ¦ Why does a handmade item from a workshop often cost more than a factory one? ¦ The craftsman spends more time and effort on it ¦ Many of them are made quickly on an assembly line ¦ Less material goes into it than into a factory one ¦ It is sold only in big supermarkets ¦ The more time and work a thing takes, the more it costs the craftsman.
+8 ¦ Which of these is a food product? ¦ An apple ¦ A chair ¦ A pencil ¦ A ball ¦ Food goods are things we eat and drink.
+9 ¦ A factory sews jackets. What kind of product is a jacket? ¦ Manufactured ¦ Food ¦ Edible ¦ Natural ¦ Clothes, furniture and toys are made at factories — they are manufactured goods.
+10 ¦ A city's infrastructure is… ¦ Roads, water, electricity — everything needed for life and business ¦ Company adverts on streets and buses ¦ Money people keep in banks and the interest the bank pays them ¦ A list of museums and monuments for tourists ¦
+11 ¦ Which Kazakhstani city is famous for the Aport apple? ¦ Almaty ¦ Karaganda ¦ Pavlodar ¦ Atyrau ¦
+12 ¦ Which Kazakhstani city is famous for coal mining? ¦ Karaganda ¦ Almaty ¦ Shymkent ¦ Aktau ¦
+13 ¦ A resource is… ¦ Something that can be used to make things (coal, water, wood) ¦ A finished product in nice packaging already on a shop shelf ¦ An advert shown on TV ¦ The name of the company that makes a product ¦
+14 ¦ A landmark is… ¦ A famous place that is interesting to visit ¦ A plant that makes goods ¦ A bank card ¦ A plant that makes lots of goods for the whole country ¦
+15 ¦ Why does a factory need good roads? ¦ To bring in raw materials and take away finished goods ¦ So workers have somewhere to walk and rest during lunch ¦ So it doesn't have to pay for electricity and water ¦ To hang the factory's adverts along them ¦ Roads are part of infrastructure: without them goods won't reach the buyer.
+16 ¦ Why are mines and plants often built near places where coal is mined? ¦ The resource is close — it is cheaper and faster to bring ¦ The weather is always warm there, so workers don't need winter clothes ¦ There are more shops and cafés for workers there ¦ There are no roads there, so nobody gets in the way ¦ The closer the resource, the less is spent on transport.
+17 ¦ A tourist came to Astana to see the Baiterek monument. Baiterek is… ¦ A landmark ¦ A plant that makes goods ¦ A resource mined from the ground ¦ A shop that sells souvenirs ¦ A landmark is a famous place that is interesting to visit.
+18 ¦ Many tourists come to a city. What business could do well there? ¦ A hotel and a café ¦ A mine ¦ A coal warehouse ¦ A farm in the desert ¦ Tourists need somewhere to stay and eat — they are customers of hotels and cafés.
+19 ¦ What is NOT part of a city's infrastructure? ¦ The residents' favourite song ¦ Roads and bridges ¦ Water supply pipes ¦ Electricity ¦ Infrastructure is roads, water, electricity — everything needed for life and business.
+20 ¦ A menu is… ¦ A list of dishes with prices ¦ A list of the café's guests ¦ The restaurant's till ¦ A waiter's uniform ¦
+21 ¦ Who takes a guest's order and brings the food? ¦ A waiter ¦ A cook ¦ A cashier ¦ A manager ¦
+22 ¦ Who cooks the dishes in the kitchen? ¦ A cook ¦ A waiter ¦ A guest ¦ A cashier ¦
+23 ¦ Who takes the guest's payment? ¦ A cashier ¦ A cook ¦ A waiter ¦ A manager ¦
+24 ¦ A visitor to a café is called… ¦ A customer or guest ¦ A supplier ¦ An investor ¦ A start-up founder ¦
+25 ¦ A guest sits down at a table. What does the waiter do first? ¦ Says hello and brings the menu ¦ Brings the bill straight away ¦ Goes to the kitchen to cook soup ¦ Clears the next table and leaves ¦ First the guest is welcomed and given the menu to choose from.
+26 ¦ Why is cleanliness very important in a café? ¦ The food is safe, and guests will want to come back ¦ So the menu is longer and all prices can go up ¦ So the cook can work fewer hours ¦ So prices can be set higher ¦ Cleanliness protects guests' health and helps the café get regular customers.
+27 ¦ A guest liked the café and comes back again and again. This is… ¦ A regular customer ¦ A supplier ¦ A cook ¦ A cashier ¦ Regular customers are the backbone of any café.
+28 ¦ Where does a café keep milk and meat so they don't go off? ¦ In the fridge ¦ On the windowsill ¦ In the till ¦ In the menu ¦ Perishable food is kept cold.
+29 ¦ Who brings food to the café: flour, vegetables, meat? ¦ A supplier ¦ A guest ¦ A waiter ¦ A cashier ¦ A supplier sells the café the food the cook makes dishes from.
+30 ¦ An order is… ¦ The list of dishes a guest chose ¦ The receipt a guest gets after paying ¦ The menu with all the café's dishes ¦ The uniform the cook wears in the kitchen ¦
+31 ¦ The order total is… ¦ How much must be paid for all the dishes together ¦ How many guests sit at one table and how many dishes they want to try ¦ How many minutes one dish takes to cook ¦ How many dishes there are on the menu ¦
+32 ¦ Tea costs 200 tenge and a pie costs 150 tenge. How much is it altogether? ¦ 350 tenge ¦ 300 tenge ¦ 400 tenge ¦ 250 tenge ¦
+33 ¦ A price is… ¦ How much one item or dish costs ¦ The total of all purchases in a day ¦ How many items are on the shelf ¦ How much money a shopper has in their wallet when entering the shop ¦
+34 ¦ Soup costs 400 tenge and salad costs 300 tenge. What is the order total? ¦ 700 tenge ¦ 600 tenge ¦ 100 tenge ¦ 800 tenge ¦ 400 + 300 = 700 tenge.
+35 ¦ The order costs 700 tenge. The guest gave 1,000 tenge. How much change? ¦ 300 tenge ¦ 700 tenge ¦ 1,700 tenge ¦ 200 tenge ¦ 1,000 − 700 = 300 tenge.
+36 ¦ Two juices at 250 tenge each. How much must be paid? ¦ 500 tenge ¦ 250 tenge ¦ 450 tenge ¦ 750 tenge ¦ 250 + 250 = 500 tenge.
+37 ¦ What does the waiter write down so as not to mix up the order? ¦ The table number and the names of the dishes ¦ The name of the cook working in the kitchen today ¦ The colour of the tablecloth ¦ The weather outside ¦ This way the cook knows what to make, and the waiter knows where to take it.
+38 ¦ Ali has 500 tenge. What can he order? ¦ Tea for 200 and a pie for 150 ¦ Soup for 400 and salad for 300 ¦ Pizza for 900 ¦ Two soups at 400 each ¦ 200 + 150 = 350 — that is less than 500. The other orders cost more than 500 tenge.
+39 ¦ Three pies at 150 tenge each. How much must be paid? ¦ 450 tenge ¦ 300 tenge ¦ 153 tenge ¦ 500 tenge ¦ 150 + 150 + 150 = 450 tenge.
+40 ¦ A tradition is… ¦ Something passed down through generations ¦ A new game invented this morning ¦ A traffic rule in a big city ¦ The name of a shop on the next street ¦ Traditions are passed down from grandparents to grandchildren.
+41 ¦ Which holiday is celebrated in Kazakhstan in spring, on 22 March? ¦ Nauryz ¦ New Year ¦ Knowledge Day ¦ Teachers' Day ¦ Nauryz is the holiday of spring and renewal.
+42 ¦ What treat is served for Nauryz? ¦ Nauryz-kozhe ¦ Pizza delivered to the door ¦ Ice cream from the freezer ¦ Just water, no treats ¦ Nauryz-kozhe is made from seven ingredients.
+43 ¦ How do traditions help business? ¦ For holidays people buy treats and gifts ¦ During holidays all shops must close by law ¦ Traditions forbid selling things on the street ¦ Traditions have nothing to do with what people buy ¦ Holidays are a time when people buy more.
+44 ¦ A yurt is… ¦ A traditional nomad home ¦ A modern shopping centre ¦ A type of fast food delivery ¦ A school reading book ¦ A yurt can be taken apart and moved to a new place.
+45 ¦ A craftsman makes dombras to sell. What is his work? ¦ A craft connected with traditions ¦ Mining coal ¦ Selling petrol at a filling station ¦ Working as a bank cashier ¦ A craft is work done by hand, often by old rules.
+46 ¦ Baursak is… ¦ Fried dough puffs ¦ A kind of national hat ¦ A musical instrument ¦ The name of a spring holiday ¦ Baursaks are served with tea and at celebrations.
+47 ¦ Shashu at a celebration is when… ¦ Guests are showered with sweets for good luck ¦ Concert tickets are sold in the park ¦ Streets are cleaned after the holiday ¦ The family plays ball in the yard ¦ Shashu is a kind tradition of wishing happiness.
+48 ¦ Why do tourists buy souvenirs with Kazakh ornaments? ¦ To take home a memory of our region ¦ Because they are forced to buy them ¦ Because they are cheaper than bread ¦ To throw them away on the way home ¦ A souvenir is a reminder of the trip and the traditions.
+49 ¦ Which product is connected with the traditions of our region? ¦ A carpet with a Kazakh ornament ¦ A plastic cup from the nearest supermarket ¦ A battery for the TV remote ¦ A phone charger ¦ Ornament is part of national culture.
+50 ¦ A fair is… ¦ A place where many sellers trade for a short time ¦ A shop that is open only at night ¦ A warehouse where shoppers are never allowed ¦ A bank where people keep their money ¦ A fair is held at a celebration or on certain days.
+51 ¦ What do people buy most before New Year? ¦ Christmas trees, decorations and gifts ¦ Swimsuits and sun hats ¦ Seeds for the vegetable garden ¦ Summer sandals ¦ A holiday creates demand for special goods.
+52 ¦ What is sold at a Nauryz fair? ¦ Nauryz-kozhe and baursaks ¦ Skis and skates ¦ Christmas tree decorations ¦ New Year fairy lights ¦ Goods at a fair are chosen to suit the holiday.
+53 ¦ Why are there many shoppers at a holiday fair? ¦ People go out and buy treats and gifts ¦ At a fair all goods are given away for free ¦ Shoppers are brought there by bus by force ¦ On holidays all shops are open round the clock ¦ A holiday brings people together in one place.
+54 ¦ A seasonal product is… ¦ A product needed at a certain time of year ¦ A product you can buy only in an online shop ¦ A product made only at a plant ¦ A product with no price and no price tag ¦ Sledges are needed in winter, ice cream in summer.
+55 ¦ Which product is needed in summer? ¦ Ice cream ¦ Warm mittens ¦ A sledge ¦ A Christmas tree ¦ Ice cream is bought when it is hot.
+56 ¦ What does a seller need at a fair? ¦ A stall, goods and prices ¦ Only car keys ¦ A pillow and a blanket ¦ A sun umbrella ¦ Without goods and prices there is no trade.
+57 ¦ Mum bought 2 baursaks at 100 tenge each. How much did she pay? ¦ 200 tenge ¦ 100 tenge ¦ 102 tenge ¦ 300 tenge ¦ 100 + 100 = 200 tenge.
+58 ¦ Why does a seller decorate the stall for a holiday? ¦ So shoppers notice it ¦ So the stall gets heavier ¦ So shoppers don't come near ¦ To hide the goods from people ¦ A nice stall catches the eye.
+59 ¦ Where is the best place to hold a fair? ¦ In a square or park with lots of people ¦ In a basement nobody goes into ¦ On the roof of a tall building ¦ Far out in the steppe with no roads ¦ A fair is held where people walk.
+60 ¦ A tourist is… ¦ A person who travels to see new places ¦ A person who lives in one town all their life and never travels ¦ A city bus driver ¦ An ice-cream seller in the park ¦ Tourists come to see interesting places.
+61 ¦ Which business earns money from tourists? ¦ A hotel ¦ A coal mine ¦ A tractor plant ¦ A cement warehouse ¦ Tourists need somewhere to sleep.
+62 ¦ Charyn Canyon is… ¦ A natural landmark of Kazakhstan ¦ A big plant in the centre of Almaty ¦ The name of a roadside café ¦ A new metro station in the centre of Kazakhstan's capital ¦ Tourists go to see its red rocks.
+63 ¦ A tour guide is… ¦ A person who tells tourists about places ¦ A mechanic who repairs cars ¦ A cook in a hotel restaurant ¦ A person who sells tourists train and bus tickets ¦ A tour guide knows the history of the region.
+64 ¦ Why are tourists good for the region? ¦ They spend money in cafés, hotels and shops ¦ They take goods from shops for free ¦ They close local shops ¦ They stop all the farmers from working ¦ Tourists' money supports local business.
+65 ¦ A souvenir is… ¦ A small thing to remember a trip by ¦ The hotel payment receipt given at reception ¦ A new house by a lake ¦ A plane ticket ¦ Magnets, key rings and figurines are souvenirs.
+66 ¦ How can tourists find out about our region? ¦ From online adverts with beautiful photos ¦ From closed roads with no signs ¦ From a secret map nobody has seen ¦ They can't — there is no way to tell them about it ¦ Advertising shows what makes the region interesting.
+67 ¦ What is a trip called where tourists live in a yurt and try national food? ¦ Ethno-tourism ¦ Space tourism ¦ A sea cruise ¦ Skiing ¦ "Ethno" means connected with a people and their traditions.
+68 ¦ Lake Burabay is in… ¦ Kazakhstan ¦ Africa ¦ Australia ¦ Antarctica ¦ Burabay is a famous holiday spot in Akmola Region.
+69 ¦ What will help tourists come back to a hotel? ¦ Cleanliness, comfort and polite staff ¦ High prices and rude answers ¦ A sign saying "No guests wanted" and a locked front door ¦ Loud music all night ¦ Happy guests come back and recommend it to friends.
+70 ¦ A shop sign is… ¦ A sign with the name above a stall or shop ¦ A price written on a small price tag ¦ A paper receipt after a purchase ¦ Money the shopper gave ¦ A shop sign can be seen from far away.
+71 ¦ A price tag is… ¦ A card with the product's price written on it ¦ A sign above the shop ¦ A box for the product ¦ A big sign with the shop's name above the entrance ¦ The price tag tells the shopper how much to pay.
+72 ¦ In what currency are prices written in Kazakhstan? ¦ In tenge ¦ In roubles ¦ In dollars ¦ In euros ¦ The tenge is Kazakhstan's national currency.
+73 ¦ Which sign suits a baursak stall? ¦ "Hot baursaks!" in big letters ¦ Small writing that doesn't mention the product ¦ A blank white sheet of paper ¦ Writing in a language nobody understands ¦ A sign must be clear and easy to see.
+74 ¦ A key ring costs 300 tenge. The shopper gave 500. How much change? ¦ 200 tenge ¦ 300 tenge ¦ 800 tenge ¦ 100 tenge ¦ 500 − 300 = 200 tenge.
+75 ¦ Why is the price written in big numbers? ¦ So the shopper sees the cost at once ¦ To use up more paper and paint ¦ To make the product heavier ¦ So nobody can read the price ¦ A clear price helps people decide quickly.
+76 ¦ What can you make with your own hands for a fair? ¦ Bookmarks and greeting cards ¦ A fridge ¦ A real car with an engine and wheels ¦ An aeroplane ¦ Simple crafts are good products for a fair.
+77 ¦ Three bookmarks at 100 tenge each. How much do they cost altogether? ¦ 300 tenge ¦ 103 tenge ¦ 30 tenge ¦ 400 tenge ¦ 100 + 100 + 100 = 300 tenge.
+78 ¦ What does a seller do when a shopper comes up? ¦ Says hello and talks about the product ¦ Turns away and says nothing ¦ Hides the goods under the table ¦ Packs up and goes home ¦ Politeness helps you sell.
+79 ¦ Revenue is… ¦ All the money a seller received for goods ¦ Money the seller spent on materials ¦ The price of the single most expensive product ¦ Money the seller borrowed ¦ Revenue is counted at the end of the fair.
+80 ¦ A buyer is… ¦ Someone who pays money for a product or service ¦ Someone who makes a product at a factory by hand ¦ Someone who guards the shop at night ¦ Someone who mops the shop floor ¦ Without buyers a business cannot work.
+81 ¦ Which of these is a service? ¦ A haircut at the hairdresser's ¦ An apple ¦ An exercise book ¦ A carton of milk from the corner shop ¦ You can't put a service in a bag — it is done for you.
+82 ¦ Which of these is a product? ¦ A pencil ¦ A taxi ride to school ¦ A swimming lesson at the pool ¦ A bike repair at a workshop ¦ A product is a thing that people buy.
+83 ¦ Mum paid for her shoes to be repaired. What did she buy? ¦ A service ¦ New shoes from a shop ¦ Food for the week ¦ A present for Grandma ¦ The craftsman provided a service — he repaired the shoes.
+84 ¦ Who buys toys most often? ¦ Parents, for their children ¦ Lorry drivers, for work ¦ Pilots, for a flight ¦ Cooks, for their kitchen ¦ The buyer is not always the one who uses the product.
+85 ¦ Why is it important for a seller to know their buyers? ¦ To offer what they need ¦ To hide from them ¦ To raise the price ¦ To sell everyone the same thing regardless ¦ Know your buyer and you know what to sell.
+86 ¦ A regular customer is someone who… ¦ Comes back to the same shop again and again ¦ Goes into a shop only once in their life ¦ Never buys anything ¦ Works as a cashier ¦ Regular customers make a shop happy.
+87 ¦ What does a buyer get for their money? ¦ A product or a service ¦ Only a receipt ¦ Only a bag ¦ Only a pretty box with a bow ¦ It is a fair exchange.
+88 ¦ How can a buyer pay? ¦ In cash or by card ¦ Only with sweets ¦ Only with a smile ¦ With pebbles from the yard ¦ People pay with money — cash or card.
+89 ¦ What does a polite shopper do? ¦ Says hello and thanks the seller ¦ Takes the item and leaves without a word ¦ Throws the money on the counter ¦ Leaves without saying anything ¦ Both seller and buyer need to be polite.
+90 ¦ Which of these is a need? ¦ A warm jacket in winter ¦ A fifth toy car for the collection ¦ A new sticker for an exercise book ¦ One more chocolate bar after lunch ¦ A need is something that is hard to do without.
+91 ¦ Which of these is a want? ¦ A new toy ¦ Bread ¦ Water ¦ A toothbrush ¦ A want is nice, but you can do without it.
+92 ¦ A smart shopper buys first… ¦ What they need ¦ Everything they see in the window ¦ The brightest thing ¦ The most expensive thing ¦ Needs first, wants later.
+93 ¦ Aiya has 500 tenge. What is smarter to buy if there is no bread at home? ¦ Bread, and something else with the change ¦ Five stickers and a lollipop ¦ A toy she liked in the shop window today ¦ Buy nothing and lose the money ¦ First what the family needs.
+94 ¦ Why write a list before going to the shop? ¦ To buy what you need and not spend extra ¦ To spend more ¦ To lose the list ¦ To buy everything you see on the shelves ¦ A list helps you not buy extra things.
+95 ¦ What should you do if you really want a toy but have little money? ¦ Save up for it ¦ Cry in the shop ¦ Take it without asking ¦ Forget about money ¦ Saving means putting a little aside at a time.
+96 ¦ An advert shows a new toy. What will a smart shopper do? ¦ Think whether they really need it ¦ Ask for three of them straight away ¦ Give away all their savings ¦ Buy it without looking at the price ¦ The advert wants you to buy — but you decide.
+97 ¦ Which product is needed every day? ¦ Food ¦ A Christmas tree decoration ¦ A carnival mask ¦ New Year fairy lights ¦ Food is always needed.
+98 ¦ Two identical pens: 100 and 150 tenge. Which will a smart shopper buy? ¦ The one for 100 tenge ¦ The one for 150 tenge ¦ Both at once ¦ Neither ¦ Same quality — choose the cheaper one.
+99 ¦ Why can wants be put off? ¦ You can do without them for a while ¦ They are always very expensive ¦ You must never buy them ¦ Wants are needed every day just like food and water ¦ Needs now, wants later.
+100 ¦ Fair revenue is… ¦ All the money received for the goods sold ¦ Money spent on materials for the goods ¦ The price of the single cheapest product ¦ Money that was borrowed ¦ Revenue is counted after the fair.
+101 ¦ 3 bookmarks were sold at 100 tenge each. What is the revenue? ¦ 300 tenge ¦ 100 tenge ¦ 103 tenge ¦ 30 tenge ¦ 100 + 100 + 100 = 300.
+102 ¦ 2 cards were sold at 200 tenge and 1 key ring for 100. What is the revenue? ¦ 500 tenge ¦ 300 tenge ¦ 400 tenge ¦ 200 tenge ¦ 200 + 200 + 100 = 500.
+103 ¦ Where is it handy to write down what was sold and for how much? ¦ In a sales table ¦ On your palm in pen ¦ Nowhere ¦ On the classroom wall ¦ A table helps you not forget anything.
+104 ¦ Which product sold best if 8 bookmarks and 3 key rings were sold? ¦ Bookmarks ¦ Key rings ¦ The same ¦ Neither ¦ 8 is more than 3.
+105 ¦ Why count the revenue after the fair? ¦ To find out how much money was earned ¦ To forget everything quickly ¦ To quarrel with the team ¦ Just to play with coins after the fair ¦ Counting shows the result of the work.
+106 ¦ The cash box had 0 and after the fair 700 tenge. What is the revenue? ¦ 700 tenge ¦ 0 tenge ¦ 70 tenge ¦ 1,700 tenge ¦ 700 − 0 = 700.
+107 ¦ What is important to do with money at a fair? ¦ Keep it safe and count it carefully ¦ Spread it all over the table ¦ Give it to everyone ¦ Hide it in different people's pockets ¦ Money likes order.
+108 ¦ Why is one product bought more often than another? ¦ It is more useful, prettier or cheaper ¦ Its seller is the quietest of all ¦ It was hidden under the table ¦ It is always just chance ¦ Buyers choose what they like and need.
+109 ¦ What should you do with a product that didn't sell? ¦ Think about why nobody bought it ¦ Throw it away without thinking ¦ Get upset with the buyers ¦ Throw it away, since nobody wanted it anyway ¦ The answer will help at the next fair.
+110 ¦ A business city's calling card tells… ¦ What makes the city interesting and what business it has ¦ The lesson and bell timetable of the school next door ¦ The weather forecast for the week ¦ Every resident's flat number ¦ A calling card is a short story about the city.
+111 ¦ What can be shown on a city's calling card? ¦ Plants, shops and landmarks ¦ Only your own name ¦ Only the author's mum and dad's phone number ¦ A shopping list ¦ Show the main and most interesting things.
+112 ¦ Why does a city need a calling card? ¦ So tourists and businesses learn about the city ¦ So the city gets smaller ¦ To close the shops ¦ So nobody comes to the city and it stays quiet ¦ A calling card attracts visitors.
+113 ¦ What should the text of a calling card be like? ¦ Short and clear ¦ Long and boring ¦ Without words ¦ In a language nobody understands ¦ People read a calling card quickly.
+114 ¦ What will help a calling card be remembered? ¦ A bright picture and a short motto ¦ Small grey text with no pictures ¦ A long list of all the city's streets ¦ A blank sheet with no writing ¦ Bright and short is memorable.
+115 ¦ Which business can be shown on Karaganda's calling card? ¦ Coal mining ¦ Growing bananas ¦ Whaling ¦ Diamond mining in the ocean ¦ Karaganda is famous for coal.
+116 ¦ Which business is connected with Almaty and Aport apples? ¦ Orchards and selling fruit ¦ Offshore oil drilling ¦ Building aeroplanes ¦ Making skis ¦ Aport is Almaty's famous apple.
+117 ¦ A city's motto is… ¦ A short phrase about what matters most in the city ¦ A long history of all the residents since the city was founded ¦ A list of shops ¦ A bus map ¦ A motto is easy to remember.
+118 ¦ Who can work on the calling card together? ¦ The whole class team ¦ Always just one person ¦ Nobody ¦ Only the teacher ¦ Everyone adds their own part.
+119 ¦ What is better not to write on a calling card? ¦ Untrue things about the city ¦ The city's name ¦ The main landmarks ¦ What the city is famous for ¦ A calling card must be honest.
+120 ¦ A presentation is… ¦ Telling listeners about your work ¦ A birthday present ¦ Quietly reading a book to yourself at the back desk ¦ The break between lessons ¦ In a presentation you show and explain.
+121 ¦ How should you speak in a presentation? ¦ Loudly and clearly, looking at the listeners ¦ In a whisper, with your back to the class ¦ Very fast, to get it over with ¦ Quietly and quickly, looking at the floor, to sit down sooner ¦ Listeners must understand you.
+122 ¦ What do listeners do during a presentation? ¦ Listen carefully and ask questions ¦ Talk loudly to each other ¦ Leave the classroom ¦ Sleep on the desk ¦ Respect for the speaker.
+123 ¦ What should you say at the end of your talk? ¦ "Thank you for listening!" ¦ "Finally, that's it" ¦ "I'm done, can I go now?" ¦ "Don't listen to me" ¦ Thanks make a good ending.
+124 ¦ Why prepare for a presentation in advance? ¦ So you don't get lost and tell everything ¦ To get tired before the talk ¦ There is no need to prepare ¦ So you can say anything in any order ¦ Preparation gives you confidence.
+125 ¦ What should you do if you forget a word during your talk? ¦ Calmly look at your notes ¦ Run out of the classroom ¦ Go quiet and sit down without finishing ¦ Start shouting ¦ Your notes are your prompt.
+126 ¦ How do you ask the speaker a question? ¦ Raise your hand and ask politely ¦ Interrupt and shout ¦ Throw a note ¦ Shout your question from your seat while they are still talking ¦ Questions are asked politely.
+127 ¦ Whose business city was presented best? ¦ The one where it's clear what the city lives on ¦ The one with the most blank sheets and empty slides ¦ The one where nothing was said ¦ The one where they shouted loudest ¦ What matters is a clear story.
+128 ¦ What can you show in a presentation? ¦ A drawing, poster or model of the city ¦ Only the empty classroom wall and a closed door ¦ Only your back ¦ Nothing at all ¦ A picture helps the story.
+129 ¦ How can you support a classmate after their talk? ¦ Clap and say what you liked ¦ Laugh at a mistake ¦ Say you would have done much better ¦ Do nothing ¦ Support helps everyone.
+130 ¦ Business is… ¦ Work that makes goods or services for people ¦ Playing hide-and-seek at break ¦ A game where nobody does anything useful for people ¦ Reading homework ¦ Business helps people and brings in income.
+131 ¦ What does a business need in order to work? ¦ A place, things, people, money ¦ Only good weather ¦ Only a nice sign over the door ¦ Nothing ¦ These are a business's resources.
+132 ¦ What is money called in Kazakhstan? ¦ Tenge ¦ Rouble ¦ Dollar ¦ Euro ¦ Tenge come as coins and banknotes.
+133 ¦ Where is money kept so it is safe? ¦ In a bank ¦ On the street ¦ Under a tree ¦ In a backpack on the desk ¦ A bank keeps money safe.
+134 ¦ Where are many identical goods made? ¦ At a plant or factory ¦ In a small bakery near Grandma's house ¦ In a park ¦ In a library ¦ This is industry.
+135 ¦ A hairdresser, a doctor, a driver — this is… ¦ The service sector ¦ Industry ¦ Agriculture ¦ Coal mining ¦ They help people — they provide services.
+136 ¦ Logistics is… ¦ How goods are delivered from the plant to the shop ¦ How goods are painted different colours ¦ How goods are hidden from shoppers ¦ How goods are wrapped in pretty paper as a gift ¦ Warehouses, lorries, delivery — that's logistics.
+137 ¦ What does a cashier do in a shop? ¦ Takes payment ¦ Cooks lunches ¦ Drives a bus ¦ Treats patients ¦ A cashier works at the till.
+138 ¦ What do you need to open your own shop? ¦ Goods, prices and a place to sell ¦ Only pretty balloons ¦ Only lots of friends ¦ Only a nice sign and nothing else at all ¦ Goods and prices are the main thing.
+139 ¦ What do we see on the way to school that is connected with business? ¦ Shops, cafés, pharmacies ¦ Trees, clouds and birds on the wires by the road ¦ Birds in a tree ¦ Puddles after rain ¦ Business is all around us.
+140 ¦ What does a business spend money on? ¦ Materials, rent and wages ¦ Only toys for the boss ¦ Only sweets ¦ Nothing ¦ Money is a business resource.
+141 ¦ Coins and banknotes are… ¦ Money ¦ Goods ¦ Shops ¦ Services ¦ Banknotes are paper, coins are metal.
+142 ¦ Why do people go to a bank? ¦ To keep, receive and send money ¦ To buy food, bread and milk for the week ¦ To watch a film ¦ To play football ¦ A bank works with money.
+143 ¦ Who delivers goods to the shop? ¦ Drivers and couriers ¦ Shoppers, who carry the boxes from the factory themselves ¦ Teachers ¦ Doctors ¦ This is the work of logistics.
+144 ¦ A warehouse is… ¦ A place where goods are stored ¦ A place where ice cream is sold ¦ A place where children play ¦ A place where people study ¦ Goods are taken from the warehouse to the shops.
+145 ¦ Which of these is a manufactured product? ¦ A chair ¦ An apple ¦ Milk ¦ Bread ¦ It is made at a factory.
+146 ¦ Which example is a service, not a product? ¦ A taxi ride to the station ¦ A new pencil case with pencils inside ¦ A football from a sports shop ¦ A squared exercise book for maths ¦ A service is done for you.
+147 ¦ What is sold at our business city's fair? ¦ Things made by hand ¦ Planes, trains and big cargo ships ¦ Whole houses ¦ Nothing ¦ A fair is a small market.
+148 ¦ Why are goods in a shop laid out in departments? ¦ So shoppers can easily find what they need ¦ To mix everything up ¦ To hide the goods ¦ So shoppers wander longer and find nothing ¦ Order helps the shopper.
+149 ¦ The price of a product is… ¦ How much money the product costs ¦ The colour of the packaging ¦ The time the shop opens in the morning ¦ The shop's opening hours ¦ The price is written on the price tag.
+150 ¦ Blitz! Who makes goods? ¦ Producers ¦ Buyers ¦ Spectators ¦ Passengers ¦ A producer is the one who makes things.
+151 ¦ Blitz! Who buys goods? ¦ Buyers ¦ Warehouses ¦ Plants ¦ Lorries ¦ The buyer pays the money.
+152 ¦ Blitz! Where are people treated when ill? ¦ In a hospital ¦ In a bakery ¦ In a warehouse ¦ In a bank ¦ A hospital provides services.
+153 ¦ Blitz! Where is bread baked? ¦ In a bakery ¦ In a pharmacy ¦ In a bank ¦ At the station ¦ A bakery produces food.
+154 ¦ Blitz! What do we pay for purchases with? ¦ Money ¦ Leaves ¦ Pebbles ¦ Sweet wrappers ¦ Money is a means of exchange.
+155 ¦ Blitz! What carries goods to the shop? ¦ A lorry ¦ A boat in a swimming pool ¦ A balloon ¦ A child's scooter ¦ A lorry is part of logistics.
+156 ¦ Blitz! Where can you take cash out with a card? ¦ At a cash machine ¦ In the fridge ¦ In a postbox ¦ In a backpack ¦ A cash machine gives out cash.
+157 ¦ Blitz! What is a place where goods are sold called? ¦ A shop ¦ A warehouse ¦ A plant ¦ A mine ¦ In a shop the seller and the buyer meet.
+158 ¦ Blitz! What is written on a price tag? ¦ The price ¦ The weather ¦ The buyer's name ¦ A house number ¦ A price tag is a hint for the shopper.
+159 ¦ Blitz! What is a market held at a celebration called? ¦ A fair ¦ A plant ¦ A bank ¦ A warehouse ¦ A fair can be temporary.

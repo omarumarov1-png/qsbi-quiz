@@ -40,3 +40,13 @@
 2. Выполните `node src/build-bank.js`. Скрипт проверит банк (4 разных варианта, без дублей) и покажет число вопросов по урокам.
 3. В `sw.js` поднимите `VERSION`, чтобы у учеников обновился офлайн-кэш.
 4. Сделайте коммит и push: сайт обновится сам.
+
+## English version (RU / EN switch)
+
+The quiz has an **RU / EN** switch in the header. In English the whole quiz switches: interface, all 1765 questions, options and explanations (no side-by-side text). The choice is remembered on the device; a link with `?lang=en` (or `#…-en` in the claude.ai artifact) opens the quiz in English. The lessons and the business club stay in Russian.
+
+- `i18n.js`: interface strings (RU/EN), the switch, loading of the English bank on demand.
+- `questions-en.js`: the English bank, same order as `questions.js`. **Generated**, don't edit by hand.
+- `src/en/g1.txt … g11.txt`: translations, one line per question: `index ¦ question ¦ correct ¦ wrong ¦ wrong ¦ wrong ¦ explanation`; `src/en/topics.json`: lesson topics.
+- `node src/build-en.js --write` checks that every question is translated, numbers match the Russian original and each translation still belongs to the same Russian question (`src/en/ru-lock.json`), then writes `questions-en.js`.
+- If a Russian question is changed or added, re-translate its line and run `node src/build-en.js --relock --write`.

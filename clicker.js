@@ -22,6 +22,8 @@
     '#ck-hud.on{opacity:1}@media (prefers-reduced-motion:reduce){#ck-hud{transition:none}}';
   document.head.appendChild(css);
   var hud, hudT;
+  // hints follow the quiz language switch (i18n.js) where there is one; lessons and the club stay in Russian
+  function L(ru, en) { return window.QI18N && QI18N.lang() === 'en' ? en : ru; }
   function say(text) {
     if (!hud) { hud = document.createElement('div'); hud.id = 'ck-hud'; hud.setAttribute('aria-live', 'polite'); document.body.appendChild(hud); }
     hud.textContent = text; hud.classList.add('on'); clearTimeout(hudT); hudT = setTimeout(function () { hud.classList.remove('on'); }, 900);
@@ -62,15 +64,15 @@
     if (typeof h[name] === 'function' && h[name](arg)) return;
     if (name === 'next') move(1);
     else if (name === 'prev') move(-1);
-    else if (name === 'select') { if (cur && document.contains(cur) && visible(cur)) { say('Выбрано'); cur.click(); } else move(1); }
-    else if (name === 'back') { say('Наверх'); window.scrollTo({ top: 0, behavior: 'smooth' }); var l = items(); highlight(null); if (l[0]) highlight(l[0]); }
+    else if (name === 'select') { if (cur && document.contains(cur) && visible(cur)) { say(L('Выбрано', 'Selected')); cur.click(); } else move(1); }
+    else if (name === 'back') { say(L('Наверх', 'To the top')); window.scrollTo({ top: 0, behavior: 'smooth' }); var l = items(); highlight(null); if (l[0]) highlight(l[0]); }
     else if (name === 'scroll') { var s = h.scroller && h.scroller(); (s || window).scrollBy({ top: arg * STEP_PX, behavior: 'auto' }); }
     else if (name === 'start') {
-      presenting = true; say('Показ');
+      presenting = true; say(L('Показ', 'Presenting'));
       var el = document.documentElement; if (!document.fullscreenElement && el.requestFullscreen) el.requestFullscreen().catch(function () {});
     }
     else if (name === 'stop') {
-      presenting = false; say('Показ закрыт');
+      presenting = false; say(L('Показ закрыт', 'Presentation closed'));
       if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function () {});
     }
   }
