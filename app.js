@@ -13,6 +13,7 @@
   ALL_GRADES.sort(function(a,b){return a-b;});
   ALL_LESSONS.sort(function(a,b){return a-b;});
   var COUNT_OPTS = [5,10,15,'max'];
+  var T = QI18N.t, LQ = QI18N.q;   // UI strings and the question in the current language (i18n.js)
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var state = {
@@ -49,12 +50,14 @@
       if(state.grade !== 'all') hp.push('g' + state.grade);
       if(state.lesson !== 'all') hp.push('l' + state.lesson);
       if(state.count !== 10) hp.push('n' + state.count);
+      if(QI18N.lang() === 'en') hp.push('en');
       return base + (hp.length ? '#' + hp.join('-') : '');
     }
     var parts = [];
     if(state.grade !== 'all') parts.push('g=' + state.grade);
     if(state.lesson !== 'all') parts.push('l=' + state.lesson);
     if(state.count !== 10) parts.push('n=' + state.count);
+    if(QI18N.lang() === 'en') parts.push('lang=en');
     return base + (parts.length ? '?' + parts.join('&') : '');
   }
   function syncUrl(){
@@ -87,7 +90,7 @@
   // the options are shuffled, so the right answer lands on a random letter.
   function prepare(q){
     var idx = shuffle([0,1,2,3]);
-    return { src: q, opts: idx.map(function(i){ return q.opts[i]; }), correct: idx.indexOf(0) };
+    return { src: q, perm: idx, correct: idx.indexOf(0) };
   }
 
 
@@ -99,7 +102,7 @@
   // when the clipboard is refused: show the link as selectable text for 8 seconds
   function toastLink(url){
     toastEl.textContent = '';
-    toastEl.appendChild(document.createTextNode('Скопируйте ссылку: '));
+    toastEl.appendChild(document.createTextNode(T('copyLink')));
     var inp = document.createElement('input');
     inp.id = 'share-url'; inp.readOnly = true; inp.value = url; inp.className = 'toast-input';
     toastEl.appendChild(inp); toastEl.hidden = false;
@@ -160,13 +163,13 @@
   var gridAnimated = false, lessonsGradeShown = null;
   function renderGradeGrid(){
     gradeGrid.innerHTML = '';
-    var allTile = el('button', 'tile all' + (state.grade==='all' ? ' active' : ''), 'Все классы');
+    var allTile = el('button', 'tile all' + (state.grade==='all' ? ' active' : ''), T('allGrades'));
     allTile.setAttribute('aria-pressed', state.grade==='all');
     allTile.onclick = function(){ state.grade='all'; state.lesson='all'; renderAll(); };
     gradeGrid.appendChild(allTile);
     ALL_GRADES.forEach(function(g){
       var t = el('button', 'tile' + (state.grade===g ? ' active' : ''), String(g));
-      t.setAttribute('aria-label', g + ' класс');
+      t.setAttribute('aria-label', T('gradeAria', {g: g}));
       t.setAttribute('aria-pressed', state.grade===g);
       t.onclick = function(){
         state.grade = g;
@@ -186,7 +189,7 @@
     var avail = lessonsAvailable(state.grade);
     var withTopics = state.grade !== 'all';
     lessonChips.classList.toggle('with-topics', withTopics);
-    var allChip = el('button', 'chip' + (state.lesson==='all' ? ' active' : ''), withTopics ? 'Все уроки ' + state.grade + ' класса' : 'Все уроки');
+    var allChip = el('button', 'chip' + (state.lesson==='all' ? ' active' : ''), withTopics ? T('allLessonsOf', {g: state.grade}) : T('allLessons'));
     allChip.onclick = function(){ state.lesson='all'; renderAll(); };
     lessonChips.appendChild(allChip);
     ALL_LESSONS.forEach(function(l){
@@ -197,11 +200,11 @@
         c = el('button', 'chip lesson-chip' + (state.lesson===l ? ' active' : ''));
         c.insertAdjacentHTML('beforeend', QG.icon(topic, 'ico'));
         var lt = el('span', 'lt');
-        lt.appendChild(el('span', 'ln', 'Урок ' + l + ' · '));
-        lt.appendChild(document.createTextNode(topic));
+        lt.appendChild(el('span', 'ln', T('lessonDot', {l: l})));
+        lt.appendChild(document.createTextNode(QI18N.topic(topic, state.grade, l)));
         c.appendChild(lt);
       } else {
-        c = el('button', 'chip' + (state.lesson===l ? ' active' : ''), 'Урок ' + l);
+        c = el('button', 'chip' + (state.lesson===l ? ' active' : ''), T('lessonN', {l: l}));
         if(avail.indexOf(l) === -1){ c.disabled = true; }
       }
       c.onclick = function(){ state.lesson = l; renderAll(); };
@@ -212,7 +215,7 @@
   function renderCountChips(){
     countChips.innerHTML = '';
     COUNT_OPTS.forEach(function(opt){
-      var c = el('button', 'chip' + (state.count===opt ? ' active' : ''), opt==='max' ? 'Все доступные' : String(opt));
+      var c = el('button', 'chip' + (state.count===opt ? ' active' : ''), opt==='max' ? T('allAvailable') : String(opt));
       c.onclick = function(){ state.count = opt; renderAll(); };
       countChips.appendChild(c);
     });
@@ -222,28 +225,26 @@
     poolCountEl.textContent = pool.length;
     startBtn.disabled = pool.length === 0;
     var best = safeGet(keyFor(state.grade, state.lesson));
-    if(best){ bestLine.hidden = false; bestLine.textContent = '★ Рекорд: ' + best + '%'; }
+    if(best){ bestLine.hidden = false; bestLine.textContent = T('record', {p: best}); }
     else { bestLine.hidden = true; }
   }
   function renderAll(){
     renderGradeGrid(); renderLessonChips(); renderCountChips(); renderPoolInfo(); syncUrl();
+    document.getElementById('footer-stats').textContent =
+      T('footer', {q: QUESTIONS.length, g: ALL_GRADES.length, a: ALL_LESSONS[0], b: ALL_LESSONS[ALL_LESSONS.length-1]});
   }
-
-  document.getElementById('footer-stats').textContent =
-    QUESTIONS.length + ' вопросов · ' + ALL_GRADES.length + ' классов · уроки ' +
-    ALL_LESSONS[0] + '–' + ALL_LESSONS[ALL_LESSONS.length-1];
 
   document.getElementById('share-btn').onclick = function(){
     var url = linkFor();
-    var label = (state.grade==='all' ? 'все классы' : state.grade + ' класс') + ', ' +
-                (state.lesson==='all' ? 'все уроки' : 'урок ' + state.lesson);
+    var label = (state.grade==='all' ? T('shareAll') : T('shareGrade', {g: state.grade})) + ', ' +
+                (state.lesson==='all' ? T('shareAllL') : T('shareL', {l: state.lesson}));
     if(navigator.share){
-      navigator.share({ title: 'QSBI Квиз-арена', text: 'Квиз: ' + label, url: url }).catch(function(){});
+      navigator.share({ title: T('shareTitle'), text: T('shareText', {label: label}), url: url }).catch(function(){});
       return;
     }
     var showLink = function(){ toastLink(url); };
     if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(url).then(function(){ toast('Ссылка скопирована: ' + label); }, showLink);
+      navigator.clipboard.writeText(url).then(function(){ toast(T('copied', {label: label})); }, showLink);
     } else { showLink(); }
   };
 
@@ -272,7 +273,6 @@
   var qExplain = document.getElementById('q-explain');
   var nextBtn = document.getElementById('next-btn');
   var milestoneRow = document.getElementById('milestone-row');
-  var LETTERS = ['А','Б','В','Г'];
 
   function renderMilestones(){
     milestoneRow.innerHTML = '';
@@ -299,28 +299,45 @@
     scoreStreak.textContent = state.streak;
     streakPill.classList.toggle('hot', state.streak >= 3);
 
-    qTopicTag.innerHTML = QG.icon(q.src.topic, 'ico');
-    qTopicTag.appendChild(document.createTextNode('Класс ' + q.src.g + ' · Урок ' + q.src.l + ' · ' + q.src.topic));
     document.getElementById('q-mark').innerHTML = QG.icon(q.src.topic);
-    qText.textContent = q.src.q;
-
     qOpts.innerHTML = '';
-    q.opts.forEach(function(optText, i){
+    q.perm.forEach(function(_, i){
       var btn = el('button', 'opt');
-      btn.appendChild(el('span', 'letter', LETTERS[i]));
-      btn.appendChild(el('span', null, optText));
+      btn.appendChild(el('span', 'letter'));
+      btn.appendChild(el('span', 'ot'));
       btn.onclick = function(){ handleAnswer(i, btn); };
       qOpts.appendChild(btn);
     });
+    fillQuestionText();
     FX.replay(qCard, 'q-in');
     FX.stagger(qOpts.children, 'enter', 55);
     var first = qOpts.querySelector('.opt');
     if(first && document.activeElement && document.activeElement.classList.contains('opt')) first.focus();
   }
 
+  // texts of the current question in the current language (also used when the language is switched mid-quiz)
+  function fillQuestionText(){
+    var q = state.current, lq = LQ(q.src), letters = T('letters');
+    qTopicTag.innerHTML = QG.icon(q.src.topic, 'ico');
+    qTopicTag.appendChild(document.createTextNode(T('tag', {g: q.src.g, l: q.src.l, t: lq.topic})));
+    qText.textContent = lq.q;
+    var btns = qOpts.querySelectorAll('.opt');
+    q.perm.forEach(function(k, i){ if(btns[i]){ btns[i].children[0].textContent = letters[i]; btns[i].children[1].textContent = lq.opts[k]; } });
+    if(state.locked) fillExplain();
+  }
+  function fillExplain(){
+    var q = state.current, lq = LQ(q.src), isCorrect = state.lastPick === q.correct;
+    qExplain.innerHTML = '';
+    qExplain.className = 'explain ' + (isCorrect ? 'ok' : 'no');
+    qExplain.appendChild(el('strong', null, isCorrect ? T('right') : T('rightAnswer', {a: lq.opts[0]})));
+    if(lq.x) qExplain.appendChild(document.createTextNode(lq.x));
+    qExplain.hidden = !(lq.x || !isCorrect);
+    nextBtn.innerHTML = (state.idx === state.order.length-1) ? T('results') + ICON('flag') : T('next');
+  }
+
   function handleAnswer(i, btn){
     if(state.locked) return;
-    state.locked = true;
+    state.locked = true; state.lastPick = i;
     var q = state.current;
     var allBtns = qOpts.querySelectorAll('.opt');
     var isCorrect = i === q.correct;
@@ -342,17 +359,12 @@
       if(idx === q.correct) b.classList.add('correct');
       else if(idx === i) b.classList.add('wrong');
     });
-    qExplain.innerHTML = '';
-    qExplain.className = 'explain ' + (isCorrect ? 'ok' : 'no');
-    qExplain.appendChild(el('strong', null, isCorrect ? 'Верно! ' : 'Правильный ответ: ' + q.src.opts[0] + '. '));
-    if(q.src.x) qExplain.appendChild(document.createTextNode(q.src.x));
-    qExplain.hidden = !(q.src.x || !isCorrect);
+    fillExplain();
 
     scoreCorrect.textContent = state.score;
     scoreWrong.textContent = state.wrong;
     scoreStreak.textContent = state.streak;
     streakPill.classList.toggle('hot', state.streak >= 3);
-    nextBtn.innerHTML = (state.idx === state.order.length-1) ? 'Итоги ' + ICON('flag') : 'Дальше →';
     nextBtn.classList.add('show');
     nextBtn.focus({preventScroll:true});
   }
@@ -393,9 +405,7 @@
   function answeredCount(){ return state.idx + (state.locked ? 1 : 0); }
   function openQuit(){
     var n = answeredCount();
-    quitText.textContent = n
-      ? 'Отвечено ' + n + ' из ' + state.order.length + '. Можно посмотреть итоги по отвеченным вопросам или выйти в меню.'
-      : 'Вы ещё не ответили ни на один вопрос. Выйти в меню?';
+    quitText.textContent = n ? T('answeredOf', {n: n, m: state.order.length}) : T('noneAnswered');
     quitResults.hidden = n === 0;
     quitPanel.hidden = false;
     (n ? quitResults : document.getElementById('quit-menu')).focus();
@@ -435,38 +445,18 @@
     var total = partial ? answered : state.order.length;
     var pct = total ? Math.round(state.score/total*100) : 0;
     QG.ring(scoreRing, pct);
-    ringLabel.textContent = pct >= 85 ? 'отлично' : pct >= 60 ? 'хорошо' : 'попробуй ещё';
     animateCount(resultPct, pct, '%');
-    resultSub.textContent = pct >= 85 ? 'Невероятно! Ты мастер бизнеса!' : pct >= 60 ? 'Хороший результат, но есть куда расти' : 'Стоит вернуться к уроку и попробовать снова';
     FX.countUp(statTotal, total);
     FX.countUp(statCorrect, state.score);
     FX.countUp(statWrong, state.wrong);
 
     var key = keyFor(state.grade, state.lesson);
     var prevBest = parseInt(safeGet(key) || '0', 10);
-    bestNote.hidden = false;
-    if(partial){
-      bestNote.textContent = 'Квиз завершён досрочно: ' + total + ' из ' + state.order.length + ' вопросов. В рекорд не идёт.';
-    } else if(pct > prevBest){
-      safeSet(key, String(pct));
-      bestNote.innerHTML = ICON('medal') + ' ' + (prevBest ? ('Новый рекорд! (было ' + prevBest + '%)') : 'Первый результат сохранён!');
-    } else {
-      bestNote.textContent = '★ Лучший результат: ' + prevBest + '%';
-    }
-
-    if(state.review.length){
-      reviewWrap.hidden = false;
-      reviewList.innerHTML = '';
-      state.review.forEach(function(q){
-        var item = el('div', 'review-item');
-        item.appendChild(el('div', 'rt', 'Класс '+q.g+' · Урок '+q.l+' · '+q.topic));
-        item.appendChild(el('div', 'rq', q.q));
-        item.appendChild(el('div', 'ra', 'Верно: ' + q.opts[0]));
-        if(q.x) item.appendChild(el('div', 'rx', q.x));
-        reviewList.appendChild(item);
-      });
-      FX.stagger(reviewList.children, 'enter', 70);
-    } else { reviewWrap.hidden = true; }
+    var record = partial ? 'partial' : pct > prevBest ? 'new' : 'old';
+    if(record === 'new') safeSet(key, String(pct));
+    state.lastResult = { pct: pct, total: total, partial: partial, record: record, prevBest: prevBest };
+    renderResultTexts();
+    if(state.review.length) FX.stagger(reviewList.children, 'enter', 70);
 
     showScreen('result');
     if(pct >= 80){
@@ -475,6 +465,26 @@
         burstConfetti(window.innerWidth*0.7, window.innerHeight*0.25, 40);
       }, 200);
     }
+  }
+
+  function renderResultTexts(){
+    var r = state.lastResult; if(!r) return;
+    ringLabel.textContent = r.pct >= 85 ? T('great') : r.pct >= 60 ? T('good') : T('tryAgain');
+    resultSub.textContent = r.pct >= 85 ? T('subGreat') : r.pct >= 60 ? T('subGood') : T('subLow');
+    bestNote.hidden = false;
+    if(r.record === 'partial') bestNote.textContent = T('early', {n: r.total, m: state.order.length});
+    else if(r.record === 'new') bestNote.innerHTML = ICON('medal') + ' ' + (r.prevBest ? T('newRecord', {p: r.prevBest}) : T('firstResult'));
+    else bestNote.textContent = T('best', {p: r.prevBest});
+    reviewWrap.hidden = !state.review.length;
+    reviewList.innerHTML = '';
+    state.review.forEach(function(src){
+      var q = LQ(src), item = el('div', 'review-item');
+      item.appendChild(el('div', 'rt', T('tag', {g: q.g, l: q.l, t: q.topic})));
+      item.appendChild(el('div', 'rq', q.q));
+      item.appendChild(el('div', 'ra', T('reviewRight', {a: q.opts[0]})));
+      if(q.x) item.appendChild(el('div', 'rx', q.x));
+      reviewList.appendChild(item);
+    });
   }
 
   document.getElementById('retry-btn').onclick = startRun;
@@ -491,7 +501,18 @@
     window.scrollTo(0, 0);
   }
 
-  renderAll();
+  // language switch: everything on screen is redrawn in the new language; a running quiz keeps its place
+  document.querySelectorAll('.lang-sw [data-lang]').forEach(function(b){
+    b.onclick = function(){ QI18N.setLang(b.getAttribute('data-lang'), function(){ toast(T('loadFail')); }); };
+  });
+  QI18N.onChange(function(){
+    renderAll();
+    if(!screens.quiz.hidden && state.current) fillQuestionText();
+    if(!screens.result.hidden) renderResultTexts();
+    if(!quitPanel.hidden) openQuit();
+  });
+
+  QI18N.ready(renderAll);
   QG.startBackground();
   (function(){
     var lessons = {}; QUESTIONS.forEach(function(q){ lessons[q.g + '/' + q.l] = 1; });
