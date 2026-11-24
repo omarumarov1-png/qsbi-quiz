@@ -11,7 +11,7 @@ const lockFile = path.join(__dirname, 'en/ru-lock.json');
 const lock = fs.existsSync(lockFile) ? JSON.parse(fs.readFileSync(lockFile, 'utf8')) : {};
 const relock = process.argv.includes('--relock');
 const h = (q) => crypto.createHash('sha1').update(q.q + '|' + q.opts.join('|')).digest('hex').slice(0, 10);
-const nums = (s) => (String(s).replace(/(\d)[ , ](?=\d{3}\b)/g, '$1').match(/\d+(?:[.,]\d+)?/g) || []).map((n) => n.replace(',', '.')).sort().join(' ');
+const nums = (s, en) => (String(s).replace(en ? /(\d),(?=\d{3}\b)/g : /(\d)[ \u00a0](?=\d{3}\b)/g, '$1').match(/\d+(?:[.,]\d+)?/g) || []).map((n) => n.replace(',', '.')).sort().join(' ');
 const en = new Array(Q.length).fill(null), problems = [];
 for (let g = 1; g <= 11; g++) {
   const f = path.join(__dirname, 'en/g' + g + '.txt');
@@ -24,7 +24,7 @@ for (let g = 1; g <= 11; g++) {
     if (p.length !== 7) return problems.push(`#${i} has ${p.length - 1} fields, expected 6`);
     const [, q, a, b, c, d, x] = p;
     if (!!x !== !!ru.x) problems.push(`#${i} explanation ${x ? 'extra' : 'missing'}`);
-    const rn = nums([ru.q, ...ru.opts, ru.x || ''].join(' | ')), enn = nums([q, a, b, c, d, x].join(' | '));
+    const rn = nums([ru.q, ...ru.opts, ru.x || ''].join(' | ')), enn = nums([q, a, b, c, d, x].join(' | '), true);
     if (rn !== enn) problems.push(`#${i} numbers differ: ru [${rn}] en [${enn}]`);
     if (lock[i] && lock[i] !== h(ru) && !relock) problems.push(`#${i} Russian text changed since translation — re-translate, then --relock`);
     en[i] = { q, opts: [a, b, c, d], x: x || undefined, topic: topics[ru.topic] };
