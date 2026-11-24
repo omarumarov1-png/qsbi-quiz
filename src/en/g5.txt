@@ -1,4 +1,4 @@
-641 ¦ Interference in communication is… ¦ Something that distorts the message: noise, hurry ¦ Extra useful information in a task ¦ Praise the leader gives the team ¦ The deadline for a task ¦
+641 ¦ Interference in communication is… ¦ Anything that distorts a message: noise, hurry ¦ Extra useful information that the leader adds to a task ¦ Praise the leader gives the team ¦ The deadline for a task ¦ 
 642 ¦ To check whether the person doing a task understood it, the leader asks them to… ¦ Repeat the task in their own words ¦ Say nothing in reply ¦ Start working straight away ¦ Write the task down and hide it ¦
 643 ¦ The pattern for a clear task: what, why, by when, and… ¦ How to check the result ¦ How much it will cost ¦ Who is to blame if it fails ¦ What the reward will be ¦
 644 ¦ A leader's mission is… ¦ To lead the team to a shared goal and help everyone take part ¦ To do all the work alone, without the team ¦ To make sure nobody in the team suggests their own ideas ¦ To avoid talking, so as not to argue ¦
@@ -26,7 +26,7 @@
 666 ¦ Who is best to put in charge of the cash box at the school fair? ¦ Someone who counts well and carefully ¦ Whoever came last ¦ Whoever shouts loudest and calls buyers over ¦ Anyone ¦ Tasks are assigned according to people's strengths.
 667 ¦ A team member can't keep up with their part of the work. What will a good manager do? ¦ Find out why and help or reassign the tasks ¦ Tell them off in front of the whole team so others work faster too ¦ Pretend not to notice ¦ Remove them from the team at once ¦ The manager is responsible for the team's overall result.
 668 ¦ At the fair 6 key rings were sold at 400 tenge each. What is the revenue? ¦ 2,400 tenge ¦ 406 tenge ¦ 1,000 tenge ¦ 2,000 tenge ¦ 6 × 400 = 2,400 tenge.
-669 ¦ What does "asar" mean for teamwork? ¦ Everyone helps the shared work, and each has their own part ¦ One person does the work for everyone else ¦ Everyone does what they like, with no shared plan ¦ The team competes to see who can do least ¦ Asar is a tradition of mutual help where everyone has their own job.
+669 ¦ What does "asar" mean for teamwork? ¦ Everyone helps the shared work, each with a part ¦ One person does the work for everyone else ¦ Everyone does what they like, with no shared plan ¦ The team competes to see who can do least ¦ Asar is a tradition of mutual help where everyone has their own job.
 670 ¦ A team of 5 made 35 bookmarks, shared equally. How many did each make? ¦ 7 ¦ 30 ¦ 40 ¦ 175 ¦ 35 ÷ 5 = 7 bookmarks.
 671 ¦ What kind of expense is school lunch usually? ¦ Essential ¦ A want ¦ Savings ¦ Income ¦
 672 ¦ Nurlan has 2,000 tenge and wants to put 10% into savings. How much will he save? ¦ 200 tenge ¦ 20 tenge ¦ 1,000 tenge ¦ 2,000 tenge ¦
@@ -42,7 +42,7 @@
 682 ¦ Income 5,000, essential expenses 2,500, savings 1,000. How much is left for wants? ¦ 1,500 ¦ 2,500 ¦ 3,500 ¦ 500 ¦ 5,000 − 2,500 − 1,000 = 1,500.
 683 ¦ The rule: first put aside 10% of income. Income is 3,000 — how much should you save? ¦ 300 ¦ 30 ¦ 3,000 ¦ 1,000 ¦ 10% of 3,000 = 300.
 684 ¦ What goes in the "Income" column? ¦ Pocket money, presents, payment for helping ¦ Sweets, stickers and toys bought during the month ¦ Travel to school ¦ Exercise books and pens ¦ Income is money that comes in.
-685 ¦ Why do you need a budget table? ¦ To see how much came in and where it went ¦ To spend faster ¦ To hide money from your parents ¦ You don't need one ¦ A table makes money visible.
+685 ¦ Why do you need a budget table? ¦ To see what came in and where it went ¦ To spend faster ¦ To hide money from your parents ¦ You don't need one ¦ A table makes money visible.
 686 ¦ Which of these is a pupil's essential expense? ¦ Travel to school ¦ A new toy ¦ A third key ring for the collection ¦ Stickers ¦ You can't do without travel.
 687 ¦ If the balance is below zero, it means… ¦ Spending is more than income ¦ The budget is perfect ¦ Savings have grown ¦ Everything is great ¦ A minus is a signal that the plan needs to change.
 688 ¦ How can you fix a minus in the budget? ¦ Cut some of the wants ¦ Add more wants ¦ Stop counting ¦ Lose the table ¦ Wants can be put off.
@@ -58,23 +58,23 @@
 698 ¦ An experienced team knows what to do. Which style is possible? ¦ Laissez-faire ¦ Authoritarian ¦ Strict control of every minute ¦ Punishments ¦ Experts don't need to be told every step.
 699 ¦ What is the downside of the authoritarian style? ¦ The team stops suggesting ideas ¦ Decisions take a very long time ¦ Nobody manages the work ¦ The team has too much freedom ¦ People get used to just following orders.
 700 ¦ Why is the laissez-faire style risky for a new team? ¦ Without guidance the work can fall apart ¦ The newcomers will be swamped with orders ¦ The leader will do everything alone ¦ All decisions will be too fast ¦ Newcomers need support.
-701 ¦ How does a good leader choose a style? ¦ According to the situation and the team ¦ Once for life ¦ By drawing lots ¦ According to the weather ¦ There's no one style for every case.
+701 ¦ How does a good leader choose a style? ¦ By the situation and the team ¦ Once for life ¦ By drawing lots ¦ According to the weather ¦ There's no one style for every case.
 702 ¦ "Do as I said, no discussion!" — which style? ¦ Authoritarian ¦ Democratic ¦ Laissez-faire ¦ None ¦ The leader decides alone.
 703 ¦ "Let's vote on which game to play." Which style? ¦ Democratic ¦ Authoritarian ¦ Laissez-faire ¦ None ¦ The decision is made together.
 704 ¦ "Do what you like, I don't care." Which style? ¦ Laissez-faire ¦ Authoritarian ¦ Democratic ¦ Team ¦ Freedom without the leader taking part.
 705 ¦ 10 seconds before the end of the match, the captain quickly tells everyone where to run. Which style? ¦ Authoritarian ¦ Laissez-faire ¦ Democratic ¦ None ¦ When time is short, quick commands are needed.
 706 ¦ The class chooses a project topic together, and the leader collects ideas. Which style? ¦ Democratic ¦ Authoritarian ¦ Laissez-faire ¦ None ¦ The leader organises a shared decision.
-707 ¦ What matters for a leader in any style? ¦ Respecting people and being responsible for the result ¦ Always shouting so the team works faster ¦ Doing nothing ¦ Choosing favourites ¦ The style changes; respect doesn't.
+707 ¦ What matters for a leader in any style? ¦ Respecting people and owning the result ¦ Always shouting so the team works faster ¦ Doing nothing ¦ Choosing favourites ¦ The style changes; respect doesn't.
 708 ¦ Why does a team like the democratic style? ¦ Everyone can suggest an idea ¦ Nobody does anything ¦ The leader decides everything alone ¦ The team has no rules ¦ People feel important.
 709 ¦ The leader says: "I've decided, but I'll explain why." What are they doing right? ¦ Explaining the decision to the team ¦ Punishing the team ¦ Keeping the reasons to themselves ¦ Punishing those who ask about the decision ¦ A decision that is understood is easier to carry out.
 710 ¦ The team is made up of newcomers who know nothing. What is the best way to start? ¦ With clear instructions, then giving more freedom ¦ With complete freedom: let them figure it out with no hints or explanations ¦ With punishments for mistakes ¦ With a day off ¦ Freedom is given as experience grows.
-711 ¦ What does the leadership styles workshop teach? ¦ To choose a style to suit the situation ¦ To always just give orders ¦ To never lead anyone ¦ To obey only older people ¦ A leader is flexible.
+711 ¦ What does the leadership styles workshop teach? ¦ To choose a style to suit the situation ¦ To always just give orders, whatever happens ¦ To never lead anyone ¦ To obey only older people ¦ A leader is flexible.
 712 ¦ The team has fallen out. What will the leader do? ¦ Listen to everyone and help them reach agreement ¦ Shout at everyone at once ¦ Leave the team ¦ Take their friend's side and blame the others ¦ A leader unites, not divides.
-713 ¦ The deadline is tomorrow and the work isn't ready. What will the leader do? ¦ Share out the remaining tasks and help themselves ¦ Wait for it to get done by itself ¦ Cancel the whole project ¦ Only tell the team off ¦ The leader is responsible for the result.
+713 ¦ The deadline is tomorrow and the work isn't ready. What will the leader do? ¦ Share out the remaining tasks and help ¦ Wait for it to get done by itself ¦ Cancel the whole project ¦ Only tell the team off ¦ The leader is responsible for the result.
 714 ¦ A team member is sad and not working. What will the leader do? ¦ Talk to them and find out why ¦ Make fun of them in front of everyone ¦ Remove them from the team ¦ Mock them in front of the whole team to cheer them up ¦ There's often a reason behind behaviour.
 715 ¦ A new pupil has joined the team. What will the leader do? ¦ Introduce them to everyone and explain the task ¦ Pay no attention to them ¦ Give them the hardest task with no explanation ¦ Send them home ¦ A newcomer needs help at the start.
 716 ¦ The team won. What will the leader do? ¦ Thank everyone for their contribution ¦ Say it was all their own doing ¦ Say nothing ¦ Tell the team off for mistakes ¦ Success is shared.
-717 ¦ The team lost. What will the leader do? ¦ Go through the mistakes and support the team ¦ Blame one person ¦ Abandon the team ¦ Say it's all pointless ¦ A defeat is a reason to learn.
+717 ¦ The team lost. What will the leader do? ¦ Review the mistakes and support the team ¦ Blame one person for everything ¦ Abandon the team ¦ Say it's all pointless ¦ A defeat is a reason to learn.
 718 ¦ A fire alarm has gone off. What will the leader do? ¦ Give clear, short commands ¦ Start a vote on the best way out ¦ Do nothing ¦ Run out first ¦ Danger needs quick decisions.
 719 ¦ The leader made a mistake. What is the right thing to do? ¦ Admit it and fix it ¦ Blame others ¦ Hide the mistake ¦ Punish the team ¦ A leader's honesty builds trust.
 720 ¦ Situational leadership is when the leader… ¦ Changes style depending on the situation ¦ Always behaves the same way, whatever is going on ¦ Leads only at work ¦ Refuses to lead ¦ Different situations, different decisions.
@@ -91,14 +91,14 @@
 731 ¦ Case: the team didn't like the leader's idea. What should the leader do? ¦ Discuss it and choose the best idea together ¦ Make everyone do it their way, since the leader is always right ¦ Take offence and leave ¦ Cancel the project ¦ A leader doesn't have to always be right.
 732 ¦ A sales plan is… ¦ How much of what we want to sell and how we'll do it ¦ A list of buyers who will definitely come ¦ The week's lesson timetable ¦ A report on how much the team sold last year ¦ A plan turns a goal into steps.
 733 ¦ Goal: sell 40 bookmarks in 2 hours. How many per hour? ¦ 20 ¦ 40 ¦ 80 ¦ 10 ¦ 40 ÷ 2 = 20.
-734 ¦ What should go into the team's sales plan? ¦ The product, the price, the quantity and who is responsible for what ¦ Only the team's favourite colour ¦ Only the team name ¦ The team song, motto and a T-shirt design ¦ A plan answers "what, how many, who".
+734 ¦ What should go into the team's sales plan? ¦ The product, price, quantity and who does what ¦ Only the team's favourite colour ¦ Only the team name ¦ The team song, motto and a T-shirt design ¦ A plan answers "what, how many, who".
 735 ¦ Why assign roles before the fair? ¦ So everyone knows what they do: cashier, seller, caller ¦ So everyone stands at the cash box at once and argues ¦ So nobody does anything ¦ Roles aren't needed ¦ Roles save time.
 736 ¦ How many items should you take to the fair if you plan to sell 30? ¦ A few more, for example 35 ¦ Exactly 30, and not a single one extra just in case ¦ Exactly 3 ¦ 300 ¦ A small reserve just in case.
 737 ¦ What does the leader check before the fair? ¦ Whether the goods, price tags, change and roles are ready ¦ The weather for next year ¦ Their own height ¦ The holiday dates and the members' favourite food ¦ A checklist before the start.
 738 ¦ The price is 200 tenge and the plan is 30 sales. Planned revenue? ¦ 6,000 tenge ¦ 230 tenge ¦ 600 tenge ¦ 3,000 tenge ¦ 200 × 30 = 6,000.
 739 ¦ If sales were low in the first hour, what should you do? ¦ Change the spot, the catchy pitch or the display ¦ Change nothing and wait till the end in case it sorts itself out ¦ Go home ¦ Have a row ¦ A plan is adjusted as you go.
 740 ¦ Why is it better to write the plan down? ¦ It can be checked and shown to the team ¦ So it gets lost and nobody in the team sees it ¦ Writing it down isn't allowed ¦ So nobody sees it ¦ A written plan belongs to everyone.
-741 ¦ Who draws up the team's sales plan? ¦ The whole team together with the leader ¦ Just one random person ¦ The buyers ¦ Nobody ¦ A shared plan means shared responsibility.
+741 ¦ Who draws up the team's sales plan? ¦ The whole team with the leader ¦ Just one random person from the team ¦ The buyers ¦ Nobody ¦ A shared plan means shared responsibility.
 742 ¦ Which leader role is the "organiser"? ¦ Assigns tasks and keeps things in order ¦ Only thinks up jokes and sits watching from the side ¦ Only sits and watches ¦ Only eats the snacks ¦ The organiser keeps the work in order.
 743 ¦ The inspiring leader… ¦ Fills the team with energy and belief in success ¦ Tells everyone off for every mistake and takes the ideas for themselves ¦ Takes all the ideas for themselves ¦ Stays silent throughout the project ¦ Inspiration helps people not give up.
 744 ¦ The mentor leader… ¦ Helps others learn ¦ Does everything alone and explains nothing to anyone ¦ Punishes ¦ Doesn't communicate ¦ A mentor grows the team.
@@ -121,7 +121,7 @@
 761 ¦ Which conclusion is useful for the leader after the fair? ¦ What helped sales and what to improve ¦ Who in the team is worst and who to punish ¦ How to forget it quickly ¦ None ¦ Analysis is the road to growth.
 762 ¦ "Leading yourself" describes a person who… ¦ Sets their own goals and sees things through ¦ Waits to be made to do things and puts tasks off ¦ Never plans anything ¦ Constantly puts things off ¦ Self-discipline is the basis of leadership.
 763 ¦ What helps you manage yourself? ¦ A daily plan and a to-do list ¦ Doing everything at the last minute ¦ Writing nothing down ¦ Looking at your phone all day ¦ A plan is a helper.
-764 ¦ Self-discipline is… ¦ The ability to do what's needed even when you don't feel like it ¦ The ability to only relax ¦ The ability to boss others around ¦ The ability to wait until someone else does everything ¦ Discipline is an inner compass.
+764 ¦ Self-discipline is… ¦ Doing what's needed even when you don't feel like it ¦ The ability to only relax ¦ The ability to boss others around ¦ The ability to wait until someone else does everything ¦ Discipline is an inner compass.
 765 ¦ How does someone who leads themselves treat mistakes? ¦ Learns from them and tries again ¦ Gives up forever ¦ Blames others ¦ Tries never to attempt anything new again ¦ Mistakes are lessons.
 766 ¦ Which goal is set better? ¦ "Read 2 books by the end of the month" ¦ "I'll read sometime" ¦ "I'll be clever" ¦ "Someday I'll become clever and read lots of books" ¦ A specific goal with a deadline.
 767 ¦ Why is rest important? ¦ So you have energy for work and study ¦ So you can do absolutely nothing ¦ Rest isn't needed ¦ So you fall behind ¦ Balance is part of managing yourself.
@@ -131,7 +131,7 @@
 771 ¦ Reflection at the end of the day is… ¦ Thinking about what went well and what to improve ¦ Going straight to bed without thinking about the day ¦ Telling yourself off ¦ Forgetting the day ¦ Reflection helps you grow.
 772 ¦ A company's structure shows… ¦ Who is responsible for what and who reports to whom ¦ How many windows the office has and the colour of the logo ¦ The colour of the logo ¦ The canteen menu ¦ A structure is a map of roles.
 773 ¦ A company director… ¦ Runs the company and makes the main decisions ¦ Only mops the floors ¦ Only sells tickets ¦ Runs the canteen till and hands out lunches ¦ The director is responsible for everything.
-774 ¦ An industry is… ¦ A branch of business: for example tourism, IT, manufacturing ¦ The name of one company that sells goods ¦ The price of a product ¦ A type of advertising ¦ Industries group similar businesses together.
+774 ¦ An industry is… ¦ A branch of business, like tourism or IT ¦ The name of one company that sells goods ¦ The price of a product ¦ A type of advertising ¦ Industries group similar businesses together.
 775 ¦ Which business belongs to the IT industry? ¦ Developing mobile apps ¦ Growing wheat on a big field in the steppe ¦ Coal mining ¦ Making shoes ¦ IT means information technology.
 776 ¦ Kaspi.kz is an example of a Kazakhstani company in… ¦ Finance and online retail ¦ Oil extraction ¦ Aircraft building ¦ Agriculture ¦ People pay and shop online through Kaspi.
 777 ¦ A sign of a successful entrepreneur: ¦ Persistence and the ability to learn from mistakes ¦ Fear of trying new things ¦ Wanting everything to work at once with no effort ¦ A habit of putting everything off ¦ Success comes to the persistent.
@@ -142,7 +142,7 @@
 782 ¦ Mistake: "A leader always does everything alone." What is correct? ¦ A leader assigns tasks and helps the team ¦ A leader does nothing ¦ A leader only punishes ¦ A leader waits for the team to work out what to do by itself ¦ A leader organises rather than carrying everything alone.
 783 ¦ Mistake: "A democratic leader decides everything alone." What is correct? ¦ They discuss decisions with the team ¦ They give complete freedom and take no part in decisions ¦ They only give orders ¦ They don't take part ¦ It's the authoritarian leader who decides alone.
 784 ¦ Profit = … ¦ Revenue − costs ¦ Revenue + costs ¦ Costs × 2 ¦ Price ÷ quantity ¦ The classic formula.
-785 ¦ Mistake: "An industry is one company." What is correct? ¦ An industry is a whole sector made up of many companies ¦ An industry is a product sold by one firm ¦ An industry is a price ¦ An industry is a director ¦ A sector is wider than a company.
+785 ¦ Mistake: "An industry is one company." What is correct? ¦ A whole sector made up of many companies ¦ An industry is a product sold by one firm ¦ An industry is a price ¦ An industry is a director ¦ A sector is wider than a company.
 786 ¦ Income 5,000, essentials 2,000, savings 1,000. How much is left for wants? ¦ 2,000 ¦ 3,000 ¦ 1,000 ¦ 5,000 ¦ 5,000 − 2,000 − 1,000 = 2,000.
 787 ¦ Mistake: "Communication doesn't matter for a leader." What is correct? ¦ Communication is the basis of leadership ¦ A leader should stay silent ¦ Communication gets in the way of work ¦ A leader doesn't need a team ¦ Without communication there's no team.
 788 ¦ How can you check whether a team member understood the task? ¦ Ask them to say it back in their own words ¦ Don't check ¦ Ask "Is everything clear?" and walk away at once ¦ Give a new task ¦ Repeating back is the best check.

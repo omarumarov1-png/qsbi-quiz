@@ -17,7 +17,7 @@
 16 ¦ Why are mines and plants often built near places where coal is mined? ¦ The resource is close — it is cheaper and faster to bring ¦ The weather is always warm there, so workers don't need winter clothes ¦ There are more shops and cafés for workers there ¦ There are no roads there, so nobody gets in the way ¦ The closer the resource, the less is spent on transport.
 17 ¦ A tourist came to Astana to see the Baiterek monument. Baiterek is… ¦ A landmark ¦ A plant that makes goods ¦ A resource mined from the ground ¦ A shop that sells souvenirs ¦ A landmark is a famous place that is interesting to visit.
 18 ¦ Many tourists come to a city. What business could do well there? ¦ A hotel and a café ¦ A mine ¦ A coal warehouse ¦ A farm in the desert ¦ Tourists need somewhere to stay and eat — they are customers of hotels and cafés.
-19 ¦ What is NOT part of a city's infrastructure? ¦ The residents' favourite song ¦ Roads ¦ Water supply ¦ Electricity ¦ Infrastructure is roads, water, electricity — everything needed for life and business.
+19 ¦ What is NOT part of a city's infrastructure? ¦ The residents' favourite song ¦ Roads and bridges ¦ Water supply pipes ¦ Electricity ¦ Infrastructure is roads, water, electricity — everything needed for life and business.
 20 ¦ A menu is… ¦ A list of dishes with prices ¦ A list of the café's guests ¦ The restaurant's till ¦ A waiter's uniform ¦
 21 ¦ Who takes a guest's order and brings the food? ¦ A waiter ¦ A cook ¦ A cashier ¦ A manager ¦
 22 ¦ Who cooks the dishes in the kitchen? ¦ A cook ¦ A waiter ¦ A guest ¦ A cashier ¦
@@ -38,7 +38,7 @@
 37 ¦ What does the waiter write down so as not to mix up the order? ¦ The table number and the names of the dishes ¦ The name of the cook working in the kitchen today ¦ The colour of the tablecloth ¦ The weather outside ¦ This way the cook knows what to make, and the waiter knows where to take it.
 38 ¦ Ali has 500 tenge. What can he order? ¦ Tea for 200 and a pie for 150 ¦ Soup for 400 and salad for 300 ¦ Pizza for 900 ¦ Two soups at 400 each ¦ 200 + 150 = 350 — that is less than 500. The other orders cost more than 500 tenge.
 39 ¦ Three pies at 150 tenge each. How much must be paid? ¦ 450 tenge ¦ 300 tenge ¦ 153 tenge ¦ 500 tenge ¦ 150 + 150 + 150 = 450 tenge.
-40 ¦ A tradition is… ¦ Something people do from generation to generation ¦ A new game invented this morning ¦ A traffic rule in a big city ¦ The name of a shop on the next street ¦ Traditions are passed down from grandparents to grandchildren.
+40 ¦ A tradition is… ¦ Something passed down through generations ¦ A new game invented this morning ¦ A traffic rule in a big city ¦ The name of a shop on the next street ¦ Traditions are passed down from grandparents to grandchildren.
 41 ¦ Which holiday is celebrated in Kazakhstan in spring, on 22 March? ¦ Nauryz ¦ New Year ¦ Knowledge Day ¦ Teachers' Day ¦ Nauryz is the holiday of spring and renewal.
 42 ¦ What treat is served for Nauryz? ¦ Nauryz-kozhe ¦ Pizza delivered to the door ¦ Ice cream from the freezer ¦ Just water, no treats ¦ Nauryz-kozhe is made from seven ingredients.
 43 ¦ How do traditions help business? ¦ For holidays people buy treats and gifts ¦ During holidays all shops must close by law ¦ Traditions forbid selling things on the street ¦ Traditions have nothing to do with what people buy ¦ Holidays are a time when people buy more.
@@ -48,7 +48,7 @@
 47 ¦ Shashu at a celebration is when… ¦ Guests are showered with sweets for good luck ¦ Concert tickets are sold in the park ¦ Streets are cleaned after the holiday ¦ The family plays ball in the yard ¦ Shashu is a kind tradition of wishing happiness.
 48 ¦ Why do tourists buy souvenirs with Kazakh ornaments? ¦ To take home a memory of our region ¦ Because they are forced to buy them ¦ Because they are cheaper than bread ¦ To throw them away on the way home ¦ A souvenir is a reminder of the trip and the traditions.
 49 ¦ Which product is connected with the traditions of our region? ¦ A carpet with a Kazakh ornament ¦ A plastic cup from the nearest supermarket ¦ A battery for the TV remote ¦ A phone charger ¦ Ornament is part of national culture.
-50 ¦ A fair is… ¦ A place where many sellers sell goods for a short time ¦ A shop that is open only at night ¦ A warehouse where shoppers are never allowed ¦ A bank where people keep their money ¦ A fair is held at a celebration or on certain days.
+50 ¦ A fair is… ¦ A place where many sellers trade for a short time ¦ A shop that is open only at night ¦ A warehouse where shoppers are never allowed ¦ A bank where people keep their money ¦ A fair is held at a celebration or on certain days.
 51 ¦ What do people buy most before New Year? ¦ Christmas trees, decorations and gifts ¦ Swimsuits and sun hats ¦ Seeds for the vegetable garden ¦ Summer sandals ¦ A holiday creates demand for special goods.
 52 ¦ What is sold at a Nauryz fair? ¦ Nauryz-kozhe and baursaks ¦ Skis and skates ¦ Christmas tree decorations ¦ New Year fairy lights ¦ Goods at a fair are chosen to suit the holiday.
 53 ¦ Why are there many shoppers at a holiday fair? ¦ People go out and buy treats and gifts ¦ At a fair all goods are given away for free ¦ Shoppers are brought there by bus by force ¦ On holidays all shops are open round the clock ¦ A holiday brings people together in one place.
@@ -73,8 +73,8 @@
 72 ¦ In what currency are prices written in Kazakhstan? ¦ In tenge ¦ In roubles ¦ In dollars ¦ In euros ¦ The tenge is Kazakhstan's national currency.
 73 ¦ Which sign suits a baursak stall? ¦ "Hot baursaks!" in big letters ¦ Small writing that doesn't mention the product ¦ A blank white sheet of paper ¦ Writing in a language nobody understands ¦ A sign must be clear and easy to see.
 74 ¦ A key ring costs 300 tenge. The shopper gave 500. How much change? ¦ 200 tenge ¦ 300 tenge ¦ 800 tenge ¦ 100 tenge ¦ 500 − 300 = 200 tenge.
-75 ¦ Why is the price written in big numbers? ¦ So the shopper sees straight away how much it costs ¦ To use up more paper and paint ¦ To make the product heavier ¦ So nobody can read the price ¦ A clear price helps people decide quickly.
-76 ¦ What can you make with your own hands for a fair? ¦ Bookmarks and greeting cards ¦ A fridge ¦ A real car ¦ An aeroplane ¦ Simple crafts are good products for a fair.
+75 ¦ Why is the price written in big numbers? ¦ So the shopper sees the cost at once ¦ To use up more paper and paint ¦ To make the product heavier ¦ So nobody can read the price ¦ A clear price helps people decide quickly.
+76 ¦ What can you make with your own hands for a fair? ¦ Bookmarks and greeting cards ¦ A fridge ¦ A real car with an engine and wheels ¦ An aeroplane ¦ Simple crafts are good products for a fair.
 77 ¦ Three bookmarks at 100 tenge each. How much do they cost altogether? ¦ 300 tenge ¦ 103 tenge ¦ 30 tenge ¦ 400 tenge ¦ 100 + 100 + 100 = 300 tenge.
 78 ¦ What does a seller do when a shopper comes up? ¦ Says hello and talks about the product ¦ Turns away and says nothing ¦ Hides the goods under the table ¦ Packs up and goes home ¦ Politeness helps you sell.
 79 ¦ Revenue is… ¦ All the money a seller received for goods ¦ Money the seller spent on materials ¦ The price of the single most expensive product ¦ Money the seller borrowed ¦ Revenue is counted at the end of the fair.
@@ -91,7 +91,7 @@
 90 ¦ Which of these is a need? ¦ A warm jacket in winter ¦ A fifth toy car for the collection ¦ A new sticker for an exercise book ¦ One more chocolate bar after lunch ¦ A need is something that is hard to do without.
 91 ¦ Which of these is a want? ¦ A new toy ¦ Bread ¦ Water ¦ A toothbrush ¦ A want is nice, but you can do without it.
 92 ¦ A smart shopper buys first… ¦ What they need ¦ Everything they see in the window ¦ The brightest thing ¦ The most expensive thing ¦ Needs first, wants later.
-93 ¦ Aiya has 500 tenge. What is smarter to buy if there is no bread at home? ¦ Bread, and something else with the change ¦ Five stickers and a lollipop ¦ A toy she liked today ¦ Buy nothing and lose the money ¦ First what the family needs.
+93 ¦ Aiya has 500 tenge. What is smarter to buy if there is no bread at home? ¦ Bread, and something else with the change ¦ Five stickers and a lollipop ¦ A toy she liked in the shop window today ¦ Buy nothing and lose the money ¦ First what the family needs.
 94 ¦ Why write a list before going to the shop? ¦ To buy what you need and not spend extra ¦ To spend more ¦ To lose the list ¦ To buy everything you see on the shelves ¦ A list helps you not buy extra things.
 95 ¦ What should you do if you really want a toy but have little money? ¦ Save up for it ¦ Cry in the shop ¦ Take it without asking ¦ Forget about money ¦ Saving means putting a little aside at a time.
 96 ¦ An advert shows a new toy. What will a smart shopper do? ¦ Think whether they really need it ¦ Ask for three of them straight away ¦ Give away all their savings ¦ Buy it without looking at the price ¦ The advert wants you to buy — but you decide.
@@ -125,11 +125,11 @@
 124 ¦ Why prepare for a presentation in advance? ¦ So you don't get lost and tell everything ¦ To get tired before the talk ¦ There is no need to prepare ¦ So you can say anything in any order ¦ Preparation gives you confidence.
 125 ¦ What should you do if you forget a word during your talk? ¦ Calmly look at your notes ¦ Run out of the classroom ¦ Go quiet and sit down without finishing ¦ Start shouting ¦ Your notes are your prompt.
 126 ¦ How do you ask the speaker a question? ¦ Raise your hand and ask politely ¦ Interrupt and shout ¦ Throw a note ¦ Shout your question from your seat while they are still talking ¦ Questions are asked politely.
-127 ¦ Whose business city was presented best? ¦ The one where it's clear what the city lives on ¦ The one with the most blank sheets ¦ The one where nothing was said ¦ The one where they shouted loudest ¦ What matters is a clear story.
+127 ¦ Whose business city was presented best? ¦ The one where it's clear what the city lives on ¦ The one with the most blank sheets and empty slides ¦ The one where nothing was said ¦ The one where they shouted loudest ¦ What matters is a clear story.
 128 ¦ What can you show in a presentation? ¦ A drawing, poster or model of the city ¦ Only the empty classroom wall and a closed door ¦ Only your back ¦ Nothing at all ¦ A picture helps the story.
 129 ¦ How can you support a classmate after their talk? ¦ Clap and say what you liked ¦ Laugh at a mistake ¦ Say you would have done much better ¦ Do nothing ¦ Support helps everyone.
 130 ¦ Business is… ¦ Work that makes goods or services for people ¦ Playing hide-and-seek at break ¦ A game where nobody does anything useful for people ¦ Reading homework ¦ Business helps people and brings in income.
-131 ¦ What does a business need in order to work? ¦ A place, things, people and money ¦ Only good weather ¦ Only a nice sign ¦ Nothing ¦ These are a business's resources.
+131 ¦ What does a business need in order to work? ¦ A place, things, people, money ¦ Only good weather ¦ Only a nice sign over the door ¦ Nothing ¦ These are a business's resources.
 132 ¦ What is money called in Kazakhstan? ¦ Tenge ¦ Rouble ¦ Dollar ¦ Euro ¦ Tenge come as coins and banknotes.
 133 ¦ Where is money kept so it is safe? ¦ In a bank ¦ On the street ¦ Under a tree ¦ In a backpack on the desk ¦ A bank keeps money safe.
 134 ¦ Where are many identical goods made? ¦ At a plant or factory ¦ In a small bakery near Grandma's house ¦ In a park ¦ In a library ¦ This is industry.

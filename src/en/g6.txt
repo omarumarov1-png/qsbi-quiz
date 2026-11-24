@@ -1,4 +1,4 @@
-802 ¦ Outdoor advertising is… ¦ Billboards, signs and adverts on transport and at bus stops ¦ Advertising only on the internet ¦ Advertising only on the radio ¦ Advertising printed only on the back of receipts ¦
+802 ¦ Outdoor advertising is… ¦ Billboards, signs, adverts on transport and stops ¦ Advertising only on the internet ¦ Advertising only on the radio ¦ Advertising printed only on the back of shop receipts ¦ 
 803 ¦ A slogan is… ¦ A short, memorable phrase about a product ¦ A full manual for the product describing all its functions ¦ A legal contract ¦ A payment receipt ¦
 804 ¦ Which kind of advertising works right at the moment of purchase? ¦ Point-of-sale advertising ¦ A TV advert in the evening slot ¦ Radio advertising ¦ Outdoor advertising ¦
 805 ¦ Marketing is… ¦ All the work of understanding the buyer and selling them the product ¦ Only printing adverts and leaflets ¦ Only selling goods online ¦ Only counting the money in the till at the end of each working day ¦
@@ -25,8 +25,8 @@
 826 ¦ How much was student Carolyn Davidson paid for the "swoosh" logo in 1971? ¦ 35 dollars ¦ 1 million dollars ¦ 10,000 dollars ¦ Nothing ¦ Later the company gave her shares as a thank-you.
 827 ¦ Why do companies register a trademark? ¦ So others can't use their symbol ¦ So the product becomes cheaper for the buyer ¦ So they no longer have to spend money on advertising ¦ So the product automatically appears in every shop in the country ¦ A trademark protects the company from fakes.
 828 ¦ In the "Who? What? How?" scheme, the question "How?" means… ¦ By what method and through which channel ¦ How much the advertised product costs ¦ Who the advertiser's director is ¦ What time the shop closes in the evening ¦ Who — the audience, What — the message, How — the method and channel.
-829 ¦ Analysing a yoghurt advert: "What?" in the "Who? What? How?" scheme is… ¦ The main message: how the yoghurt is good for you ¦ How much the roadside banner costs ¦ Who the dairy's director is ¦ What colour the headline font is ¦ "What?" is the main idea of the advert.
-830 ¦ Why should a logo be simple? ¦ It is easy to recognise and remember ¦ It can't be printed ¦ The law requires it ¦ A simple logo is free ¦ A simple symbol is recognised even as a tiny icon.
+829 ¦ Analysing a yoghurt advert: "What?" in the "Who? What? How?" scheme is… ¦ The main message: why the yoghurt is good ¦ How much the roadside banner costs ¦ Who the dairy's director is ¦ What colour the headline font is ¦ "What?" is the main idea of the advert.
+830 ¦ Why should a logo be simple? ¦ It's easy to recognise and remember ¦ It can't be printed ¦ The law requires it ¦ A simple logo is free ¦ A simple symbol is recognised even as a tiny icon.
 831 ¦ A company copied someone else's registered logo. What does it face? ¦ Trademark infringement and court ¦ Nothing — logos can be taken freely ¦ Higher sales with no consequences ¦ Free advertising from the trademark owner ¦ Trademarks are protected by law.
 832 ¦ The main difference between PR and advertising is that PR aims at… ¦ Long-term trust and reputation ¦ Selling the product immediately, right now ¦ Cutting the cost price ¦ A bigger leaflet print run ¦
 833 ¦ In advertising you pay for space; in PR you pay for… ¦ Preparing an event ¦ Space on a billboard ¦ Printing leaflets ¦ A discount for the customer ¦
@@ -47,7 +47,7 @@
 848 ¦ What destroys a brand fastest? ¦ Lies and poor quality ¦ Honesty ¦ Good customer support ¦ Caring about customers ¦ Trust takes years to build and a day to lose.
 849 ¦ The word "brand" comes from a word that once meant… ¦ A mark burned into livestock ¦ Tasty fresh bread ¦ A fast car ¦ A big shop in the city centre ¦ Owners marked their livestock with a sign.
 850 ¦ A brand book is… ¦ The rules for using the logo, colours and fonts ¦ A list of the company's customers ¦ The company's annual accounting report on profit and costs ¦ A café menu ¦ A brand book keeps the style consistent.
-851 ¦ Why should a brand have a recognisable colour? ¦ It makes the brand easier to recognise and remember ¦ It's cheaper to print everything ¦ Colour doesn't matter at all ¦ To confuse buyers ¦ Colour is a quick signal to the eye.
+851 ¦ Why should a brand have a recognisable colour? ¦ It makes the brand easy to recognise ¦ It's cheaper to print everything ¦ Colour doesn't matter at all ¦ To confuse buyers ¦ Colour is a quick signal to the eye.
 852 ¦ A personal brand is… ¦ How people see you and what you do ¦ The logo of the company your parents work for ¦ Your salary ¦ A bank account ¦ Everyone has a personal brand.
 853 ¦ Where should you start your personal brand? ¦ Understand what you're good at and what interests you ¦ Buy followers and copy a popular blogger's style ¦ Copy someone else's style ¦ Delete all your photos ¦ A brand is built on real strengths.
 854 ¦ What is a digital footprint? ¦ Everything that can be found about you online ¦ The fingerprint you unlock your phone with ¦ Your email password ¦ A list of friends ¦ A digital footprint stays for a long time.
@@ -63,7 +63,7 @@
 864 ¦ A copywriter… ¦ Writes advertising texts and slogans ¦ Draws logos and takes product photos ¦ Films videos ¦ Counts money ¦ A copywriter works with words.
 865 ¦ What does a designer do at an agency? ¦ Creates layouts, logos and the visual image ¦ Writes contracts with clients and checks that invoices are paid ¦ Cleans the office windows ¦ Sells the product ¦ A designer works with images.
 866 ¦ A media planner… ¦ Chooses where and when to show the advert ¦ Writes advertising texts and thinks up slogans ¦ Sews clothes ¦ Cooks food ¦ It's important to reach the right people at the right time.
-867 ¦ A brief is… ¦ The client's task: goal, audience, budget, deadlines ¦ A finished advert that is shown on TV ¦ A paper receipt ¦ A film ¦ Work starts with the brief.
+867 ¦ A brief is… ¦ The client's task: goal, audience, budget, deadlines ¦ A finished advert that is already being shown on national TV ¦ A paper receipt ¦ A film ¦ Work starts with the brief.
 868 ¦ A creative idea is… ¦ The main original thought of an advertising campaign ¦ The product's price ¦ The text font ¦ The contract with the client on the campaign's price ¦ The whole advert is built on the idea.
 869 ¦ An account manager… ¦ Talks to the client and runs the project ¦ Films adverts with a big camera ¦ Draws pictures ¦ Does nothing ¦ They connect the client and the team.
 870 ¦ Why do companies order advertising from agencies? ¦ Experienced specialists work there ¦ It's always free ¦ The law requires it ¦ So as not to sell anything ¦ Professionals make advertising more effective.
@@ -76,9 +76,9 @@
 877 ¦ How can you check the result of promotion? ¦ Compare sales and responses with the goal ¦ Don't check at all ¦ Ask the neighbour's cat ¦ Don't check — what matters is that the advert looked nice ¦ Results are measured in numbers.
 878 ¦ A marketing project's budget is… ¦ How much money can be spent on promotion ¦ Revenue from sales ¦ The revenue from selling the product at the fair ¦ A discount for the buyer ¦ The budget limits the choice of channels.
 879 ¦ Which promotion channel is free? ¦ A post in the school group ¦ A motorway billboard ¦ An advert on national TV ¦ A magazine advert ¦ Your own channels are free.
-880 ¦ Why know your competitors? ¦ To stand out and offer something better ¦ To copy them completely ¦ To quarrel with them ¦ There's no reason ¦ Analysing competitors helps you find your USP.
+880 ¦ Why know your competitors? ¦ To stand out and offer something better ¦ To copy them completely ¦ To quarrel with them all the time ¦ There's no reason ¦ Analysing competitors helps you find your USP.
 881 ¦ What should the project presentation show? ¦ The goal, audience, channels and result ¦ Only the logo ¦ The team's lunch timetable during preparation ¦ A list of friends ¦ It's the complete picture of the project.
-882 ¦ How should you promote a product at the school fair? ¦ A notice in the school group, a poster at the entrance and a catchy pitch ¦ Tell nobody until the last minute ¦ Only national TV advertising ¦ Say nothing to anyone until the last minute of the fair ¦ Channels are chosen by audience and budget.
+882 ¦ How should you promote a product at the school fair? ¦ A post in the school group, a poster and a catchy pitch ¦ Tell nobody until the last minute ¦ Only national TV advertising ¦ Say nothing to anyone until the last minute of the fair ¦ Channels are chosen by audience and budget.
 883 ¦ Which promotion channel at the fair is cheapest? ¦ A post in the school group ¦ A motorway billboard ¦ A national TV advert in the evening ¦ A magazine advert ¦ Your own channels are free.
 884 ¦ What is a "promotion" (promo offer)? ¦ A short offer to attract buyers: for example, "2 for the price of 1" ¦ Refusing to sell all day to make it more interesting ¦ Doubling the price ¦ Closing the stall for lunch ¦ An offer gives people a reason to buy now.
 885 ¦ Why have a tasting at the fair? ¦ So buyers try it and want to buy ¦ So you can eat all the goods yourselves before buyers arrive ¦ To scare buyers off ¦ There's no reason ¦ Tried it — liked it — bought it.
@@ -89,8 +89,8 @@
 890 ¦ What promotion budget is sensible for a school fair? ¦ A small one: paper, markers, printouts ¦ A million tenge ¦ A whole year's earnings, so the advertising is the biggest ¦ No limit ¦ Advertising costs mustn't eat up the profit.
 891 ¦ How can you check whether the promotion worked? ¦ Compare sales with the plan ¦ Don't check ¦ Count the clouds on the day of the fair ¦ Ask the cat ¦ The result is measured in sales.
 892 ¦ The first step of the marketing project workshop: ¦ Choose the product and describe its buyer ¦ Start printing leaflets without knowing what we're selling ¦ Count the profit ¦ Choose prizes ¦ First: what, and for whom.
-893 ¦ What is a "buyer persona"? ¦ A description of a typical customer: age, interests, habits ¦ A phone photo of any passer-by near the school ¦ A drawing of the seller ¦ A price list ¦ A persona helps you choose channels.
-894 ¦ How would you word the USP for eco-bookmarks? ¦ "Bookmarks made from recycled paper — beautiful and kind to nature" ¦ "Ordinary bookmarks, just like in any stationery shop" ¦ "Buy something" ¦ "Totally ordinary" ¦ A USP explains what makes the product special.
+893 ¦ What is a "buyer persona"? ¦ A description of a typical customer: age, interests, habits ¦ A phone photo of any random passer-by you met near the school ¦ A drawing of the seller ¦ A price list ¦ A persona helps you choose channels.
+894 ¦ How would you word the USP for eco-bookmarks? ¦ "Recycled-paper bookmarks — beautiful and kind to nature" ¦ "Ordinary bookmarks, just like in any stationery shop" ¦ "Buy something" ¦ "Totally ordinary" ¦ A USP explains what makes the product special.
 895 ¦ Which channel should you choose to promote to classmates? ¦ The class chat and a stand at school ¦ A newspaper for pensioners ¦ A pensioners' newspaper that comes out once a month ¦ A business magazine ¦ Channels go where the audience is.
 896 ¦ A media plan is… ¦ A plan of where, when and how often to show the advert ¦ A list of all the buyers who have already bought our product ¦ A receipt ¦ The country's budget ¦ A media plan puts promotion in order.
 897 ¦ How can you make a product post more interesting? ¦ A photo of the product, a short text and a call to action ¦ Only long text with no photo, to say everything at once ¦ A blank picture ¦ A list of prices for everything ¦ Visual + benefit + call to action.
@@ -119,7 +119,7 @@
 920 ¦ One channel brought few buyers, but they were very happy. Conclusion? ¦ The channel is useful — it's worth developing ¦ The channel is useless, since there were very few buyers ¦ Buyers don't matter ¦ Nothing ¦ Quality matters too.
 921 ¦ Why compare channels with each other? ¦ To put your effort into the best ones ¦ To quarrel ¦ So all channels get the same money and attention ¦ So they're all the same ¦ Resources are limited — choose the best.
 922 ¦ Presentation workshop: how should you start your talk? ¦ With the problem and the project's goal ¦ With thanks for lunch ¦ With an apology for bad slides ¦ With the end of the project ¦ The start sets the tone.
-923 ¦ How should you end the presentation? ¦ With a short summary and a call to action ¦ By suddenly going quiet ¦ With "well, that's it" ¦ By walking off ¦ The ending is remembered.
+923 ¦ How should you end the presentation? ¦ With a short summary and a call to action ¦ By suddenly going quiet in the middle ¦ With "well, that's it" ¦ By walking off ¦ The ending is remembered.
 924 ¦ What is a "pitch"? ¦ A short, persuasive presentation of an idea ¦ A long, hour-long report with detailed tables ¦ An argument ¦ A receipt ¦ A pitch is short and punchy.
 925 ¦ Why is it important to rehearse with a timer? ¦ To fit into the time allowed ¦ To get tired in advance and speak more slowly at the presentation ¦ Time doesn't matter ¦ To forget the text ¦ Time is a rule of the presentation.
 926 ¦ What should you do if the microphone breaks? ¦ Speak louder and calmly carry on ¦ Run off the stage ¦ Cancel the presentation ¦ Go quiet and wait until the technicians fix everything ¦ Be ready for the unexpected.
@@ -128,13 +128,13 @@
 929 ¦ If the jury criticises you, how should you react? ¦ Thank them and explain or accept the point ¦ Argue with the jury, take offence and ignore the comments ¦ Ignore it ¦ Leave ¦ Criticism is a gift.
 930 ¦ What is judged in the presentation? ¦ Logic, numbers, delivery and teamwork ¦ Only clothes ¦ Only loudness ¦ How many slides the team had and what background they used ¦ The criteria are known in advance.
 931 ¦ How should a team of three share the talk? ¦ Each presents their own part of the project ¦ One talks, two stay silent ¦ Everyone talks in chorus ¦ One talks while the other two stand silently by the board ¦ A team presentation.
-932 ¦ Marketing in the broad sense is… ¦ A company's work to understand the buyer and sell them the product they need ¦ Only printing advertising leaflets ¦ Only selling at the market ¦ Running TV adverts so absolutely everyone knows about the product ¦ Marketing is broader than advertising.
+932 ¦ Marketing in the broad sense is… ¦ A company's work to understand buyers and sell them what they need ¦ Only printing advertising leaflets ¦ Only selling at the market ¦ Running TV adverts so absolutely everyone in the country knows the product ¦ Marketing is broader than advertising.
 933 ¦ The 5P model adds to the 4Ps… ¦ People ¦ Price ¦ Place ¦ Product ¦ Product, Price, Place, Promotion, People.
 934 ¦ Digital marketing is promotion through… ¦ The internet, social media and apps ¦ Only newspapers ¦ Only video games, streaming and online cinemas ¦ Only leaflets ¦ Digital means online channels.
 935 ¦ Unconventional (guerrilla) marketing is… ¦ Unusual, low-cost ways to attract attention ¦ Only expensive prime-time TV advertising ¦ Giving up all advertising ¦ Only discounts ¦ Creativity instead of big budgets.
-936 ¦ Traditional marketing is… ¦ Familiar channels: TV, radio, newspapers, outdoor advertising ¦ Only online advertising targeted by interests ¦ Only bloggers ¦ Only apps ¦ The classic channels.
+936 ¦ Traditional marketing is… ¦ Familiar channels: TV, radio, press, outdoor ¦ Only online advertising targeted by interests ¦ Only bloggers ¦ Only apps ¦ The classic channels.
 937 ¦ How does a company study its customers? ¦ Surveys, observation, analysing purchases ¦ Fortune-telling and guesses without any purchase data ¦ It doesn't ¦ Only guesses ¦ Customer data is the basis of marketing.
-938 ¦ Why does a business need advertising? ¦ To tell people about the product and persuade them to buy ¦ To hide the product ¦ To close the shop ¦ So the company pays less tax ¦ Advertising is part of promotion.
+938 ¦ Why does a business need advertising? ¦ To tell people about the product and persuade them to buy ¦ To hide the product from buyers so nobody finds it ¦ To close the shop ¦ So the company pays less tax to the state ¦ Advertising is part of promotion.
 939 ¦ A company's brand is… ¦ The company's image in people's minds ¦ Only the logo ¦ The firm's name printed on its business card ¦ Only the warehouse ¦ A logo is only part of a brand.
 940 ¦ PR aims at… ¦ Trust and reputation ¦ An immediate sale ¦ Lowering prices ¦ The warehouse ¦ PR builds trust.
 941 ¦ The AIDA model: attention, interest, desire and… ¦ Action ¦ Money ¦ Delivery ¦ Contract ¦ An advertising classic.

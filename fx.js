@@ -44,7 +44,7 @@
   function streak(n, host){
     if(!(n === 3 || n === 5 || (n >= 10 && n % 5 === 0)) || !host) return;
     var b = document.createElement('div'); b.className = 'fx-streak';
-    b.innerHTML = ICON('flame') + ' ' + n + ' подряд!';
+    b.innerHTML = ICON('flame') + ' ' + (window.QI18N ? QI18N.t('streakN', {n: n}) : n + ' подряд!');
     host.appendChild(b);
     setTimeout(function(){ b.remove(); }, reduce ? 1200 : 1500);
   }

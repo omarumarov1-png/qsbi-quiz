@@ -28,7 +28,7 @@
       early: 'Квиз завершён досрочно: {n} из {m} вопросов. В рекорд не идёт.', newRecord: 'Новый рекорд! (было {p}%)', firstResult: 'Первый результат сохранён!', best: '★ Лучший результат: {p}%',
       reviewRight: 'Верно: {a}', review: 'Разобрать ошибки', change: '↺ Другое', retry: 'Ещё раз',
       quitQ: 'Выйти из квиза?', showResults: 'Показать итоги', toMenu: 'Выйти в меню', continue: 'Продолжить квиз',
-      letters: ['А', 'Б', 'В', 'Г'], loadFail: 'Не удалось загрузить английскую версию. Проверьте интернет.'
+      letters: ['А', 'Б', 'В', 'Г'], streakN: '{n} подряд!', loadFail: 'Не удалось загрузить английскую версию. Проверьте интернет.'
     },
     en: {
       htmlTitle: 'QSBI Quiz Arena — business education, grades 1–11', title: 'QSBI Quiz Arena', sub: 'Term 2 · lessons 17–32',
@@ -53,7 +53,7 @@
       early: 'Quiz ended early: {n} of {m} questions. This does not count as a record.', newRecord: 'New record! (was {p}%)', firstResult: 'First result saved!', best: '★ Best result: {p}%',
       reviewRight: 'Correct: {a}', review: 'Review mistakes', change: '↺ Change', retry: 'Try again',
       quitQ: 'Leave the quiz?', showResults: 'Show results', toMenu: 'Back to menu', continue: 'Keep going',
-      letters: ['A', 'B', 'C', 'D'], loadFail: "Couldn't load the English version. Check your internet connection."
+      letters: ['A', 'B', 'C', 'D'], streakN: '{n} in a row!', loadFail: "Couldn't load the English version. Check your internet connection."
     }
   };
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
